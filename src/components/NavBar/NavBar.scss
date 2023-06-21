@@ -1,14 +1,29 @@
 @import '../../css-config/mixins.scss';
 body{
-    background-color: rgba(0, 0, 0, 0.5);
     height: 200vh;
 }
 .nav-bar{
+    z-index: 100;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px black;
     nav{
         width: 100%;
-        padding: 20px 0;
         text-align: center;
-        transition: all 0.5s ease;
+        transition: padding 1s ease;
+        &.sticky{
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0 8%;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            ul{
+                width: auto;
+                background: none;
+            }
+        }
         .logo{
             height: 60px;
             cursor: pointer;
@@ -23,17 +38,6 @@ body{
                 list-style: none;
                 margin: 20px 30px;
             }
-        }
-
-        &.sticky{
-            position: sticky;
-            top: 0;
-            left: 0;
-            padding: 0 8%;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-
         }
     }
 }

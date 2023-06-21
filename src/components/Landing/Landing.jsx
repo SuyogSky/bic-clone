@@ -1,11 +1,13 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
-
+import './Landing.scss'
 const Landing = () => {
   return(
     <>
         <NavBar/>
-        Hello
+        <section className="landing">
+          Hello Landing
+        </section>
     </>
   )
 }

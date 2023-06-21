@@ -3,15 +3,19 @@ import './NavBar.scss'
 import Logo from '../../assets/Images/biratnagar-normal-logo.svg'
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [scrollHeight, setScrollHeight] = useState(0)
 
   window.onscroll = () => {
-    if(window.pageXOffset >= '200px'){
-      console.log('hehe')
+    if(window.scrollY >= 150 ){
+      setScrolled(true)
+    }
+    else if(window.scrollY === 0){
+      setScrolled(false)
     }
   }
   return(
     <header className="nav-bar">
-      <nav className="sticky">
+      <nav className={scrolled?'sticky':''}>
           <img src={Logo} alt="" className="logo"/>
           <ul>
               <li><a href="" className="active">Home</a></li>
