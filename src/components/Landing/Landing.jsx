@@ -5,6 +5,7 @@ const Landing = () => {
   return(
     <>
         <NavBar/>
+        {/* Hello */}
     </>
   )
 }

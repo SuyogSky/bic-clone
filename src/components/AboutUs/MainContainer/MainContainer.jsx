@@ -1,22 +1,12 @@
 import React from "react";
 import '../../NavBar/NavBar.scss'
 import Logo from '../../../assets/Images/biratnagar-normal-logo.svg'
-const NavBar = () => {
+const MainContainer = () => {
   return(
-    <header className="nav-bar">
-        <nav>
-            <img src={Logo} alt="" className="logo"/>
-            <ul>
-                <li><a href="" className="active">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Our Partners</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-            </ul>
-        </nav>
-    </header>
+   <div className="maincontainer-aboutus">
+        Hello Ishan
+   </div>
   )
 }
 
-export default NavBar;
+export default MainContainer;
