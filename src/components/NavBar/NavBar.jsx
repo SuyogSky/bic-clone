@@ -10,21 +10,19 @@ const NavBar = () => {
     }
   }
   return(
-    <div className="landing">
-      <header className="nav-bar">
-        <nav className="scrolled">
-            <img src={Logo} alt="" className="logo"/>
-            <ul>
-                <li><a href="" className="active">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Our Partners</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-            </ul>
-        </nav>
-    </header>
-    </div>
+    <header className="nav-bar">
+      <nav className="sticky">
+          <img src={Logo} alt="" className="logo"/>
+          <ul>
+              <li><a href="" className="active">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Our Partners</a></li>
+              <li><a href="">Programmes</a></li>
+              <li><a href="">Programmes</a></li>
+              <li><a href="">Programmes</a></li>
+          </ul>
+      </nav>
+  </header>
   )
 }
 
