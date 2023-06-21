@@ -8,7 +8,6 @@ const Landing = () => {
     <>
         <NavBar/>
         <MainContainer/>
-        
     </>
   )
 }
