@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import './NavBar.scss'
 import Logo from '../../assets/Images/biratnagar-normal-logo.svg'
 const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  window.onscroll = () => {
+    if(window.pageXOffset >= '200px'){
+      console.log('hehe')
+    }
+  }
   return(
-    <header className="nav-bar">
-        <nav>
+    <div className="landing">
+      <header className="nav-bar">
+        <nav className="scrolled">
             <img src={Logo} alt="" className="logo"/>
             <ul>
                 <li><a href="" className="active">Home</a></li>
@@ -16,6 +24,7 @@ const NavBar = () => {
             </ul>
         </nav>
     </header>
+    </div>
   )
 }
 

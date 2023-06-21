@@ -3,39 +3,72 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     height: 200vh;
 }
-.nav-bar{
+.landing{
     width: 100%;
-    background-color: red;
-    nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 20px;
-        img{
-            height: 70px;
-        }
-        ul{
-            background-color: white;
+    height: 100vh;
+    .nav-bar{
+        nav{
             width: 100%;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            list-style: none;
-            margin-top: 20px;
-            li{
-                a{
-                    text-decoration: none;
-                    font-size: 16px;
-                    color: black;
-                    transition: all 0.5s ease;
-                    &:hover, &.active{
-                        color: red;
-                    }
+            padding: 20px 0;
+            text-align: center;
+            .logo{
+                height: 60px;
+                cursor: pointer;
+                margin: 20px 0;
+            }
+            ul{
+                background-color: white;
+                width: 100%;
+                margin-top: 10px;
+                li{
+                    display: inline-block;
+                    list-style: none;
+                    margin: 20px 30px;
                 }
             }
         }
     }
 }
+// .nav-bar{
+//     width: 100%;
+//     nav{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 15px;
+//         padding-top: 20px;
+//         box-shadow: 0 0 10px black;
+//         transition: all 0.5s ease;
+//         &.scrolled{
+//             flex-direction: row;
+//             background-color: rgb(255, 255, 255);
+//             padding: 10px 6%;
+//             justify-content: space-between;
+//         }
+//         img{
+//             height: 70px;
+//         }
+//         ul{
+//             width: 100%;
+//             height: 80px;
+//             background-color: white;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             gap: 30px;
+//             list-style: none;
+//             li{
+//                 a{
+//                     text-decoration: none;
+//                     font-size: 16px;
+//                     color: black;
+//                     transition: all 0.5s ease;
+//                     &:hover, &.active{
+//                         color: red;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
