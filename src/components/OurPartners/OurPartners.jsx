@@ -1,14 +1,24 @@
 import React from "react";
-import OurPartners from '../OurPartners/OurPartners';
-
-import MainContainer from "../AboutUs/MainContainer/MainContainer";
+import NavBar from "../NavBar/NavBar";
+import './OurPartners.css'
+import '../OurPartners/OurPartners.css'
 
 const OurPartners = () => {
   return(
     <>
         <NavBar/>
+
+        <div className="block1">
+
+        </div>
+
+        <div className="guys">
         
-        
+        </div>
+
+        <div className="guys1" >
+            
+        </div>
     </>
   )
 }
