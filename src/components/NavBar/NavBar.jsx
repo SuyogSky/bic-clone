@@ -15,10 +15,11 @@ const NavBar = () => {
   }
   return(
     <>
-      <div className="top">
-        <p></p>
+      <div className="top-bar">
+        <p>Sunny</p>
+        <p>Biratnagag</p>
       </div>
-      <header className="nav-bar">
+      <header className="navigation-bar">
         <nav className={scrolled?'sticky':''}>
             <img src={Logo} alt="" className="logo"/>
             <ul>
