@@ -1,24 +1,90 @@
-.block1{
-    width: 30%;
-    height: 30%;
-    background-color: red;
-    color:blueviolet;
+.Heading{
+
+    margin-top: 20px;
+    margin-left: 550px;
+    display: flex;
+    align-items: center;
+    opacity: 60%;
+    font-family: Roboto Serif;
+    font-size: 48;
+    color:black;
 }
 
 .guys{
-    margin-top: 60px;
-    margin-left: 120px;
-    width: 30%;
-    height: 20vh;
-    color: red;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40%;
+    height: 15vh;
+    border-radius: 8px;
     background-color: rgb(189, 57, 33);
+    
 }
 
+
+.Wolver{
+    position: relative;
+    margin-top: -60px;
+    margin-left: 120px;
+    width: 82%;
+    height: 60vh;
+    z-index: 100;
+    border-radius: 8px;
+    
+}
 .guys1{
-    margin-top: 400px;
-    margin-left: 1000px;
-    width: 30%;
-    height: 20vh;
+    margin-top: -240px;
+    margin-left: 1105px;
+    position: absolute;
+    border-radius: 8px;
+    width: 7%;
+    height: 52vh;
     color: red;
-    background-color:rgb(189, 57, 33);;
+    background-color:rgb(189, 57, 33);
+    z-index: 10;
+}
+
+.text1{
+    margin-top: -282px;
+    margin-left: 60px;
+    position: relative;
+    width: 82%;
+    height: 60vh;
+    background-color:rgba(0, 0, 0, 0.489);
+    border-radius: 8px;
+    z-index: 100;
+    /* display: flex;
+    align-items: center; */
+}
+
+.text1 h1{
+    font-size: 24px;
+    z-index: 200;
+    color: red;
+    padding-top: 30px;
+    margin-left: 450px;
+    color: white;
+   
+    
+}
+
+.text1 img{
+    width: 200px;
+    height: 60px;
+    z-index: 300000;
+    position: relative;
+    margin-left: 400px;
+    color: red;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.text1 h4{
+    width: 60%;
+    text-align: justify;
+    color: white;
+    margin-left: 180px;
+    margin-top: 20px;
+    font-family: poppins;
+    opacity: 80%;
 }
