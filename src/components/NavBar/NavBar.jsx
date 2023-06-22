@@ -22,7 +22,7 @@ const NavBar = () => {
             <ul>
                 <li><a href="" className="active">Home</a></li>
                 <li  onClick={()=>navigate('/about')}><a>About Us</a></li>
-                <li><a href="">Our Partners</a></li>
+                <li onClick={()=>navigate('/blog')}><a>Blog</a></li>
                 <li><a href="">Programmes</a></li>
                 <li><a href="">Programmes</a></li>
                 <li><a href="">Programmes</a></li>

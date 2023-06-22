@@ -8,7 +8,7 @@ const MainContainer = () => {
   return(
 <div className="maincontainer-aboutus">
   <h1>About</h1>
-  <h3>Biratnagar International College</h3>
+  <h3>Biratnagar <span>International College</span> </h3>
   <div className="content-aboutus">
     <div className="showimage">
     <img className="about-image" src={`${AboutUs}`} alt="" width="500px" />

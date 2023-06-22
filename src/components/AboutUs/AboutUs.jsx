@@ -7,7 +7,7 @@ const Landing = () => {
   return(
     <>
         <NavBar/>
-        <MainContainer/>
+        {/* <MainContainer/> */}
     </>
   )
 }
