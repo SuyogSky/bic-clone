@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import Image from "../../assets/BlogCoverImage/firstblog.png";
 import "../BlogPage/LandingContainer.scss";
+
+
 const BlogMain = () => {
   const navigate = useNavigate();
   const [a, b] = useState(true);
@@ -104,7 +106,6 @@ const BlogMain = () => {
       image: Image,
       writer_image: "path of writer image",
       writer_name: "Aaryan", view: 10
-
     },
     {
       post_id: "3",
