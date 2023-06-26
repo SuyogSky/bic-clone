@@ -1,0 +1,291 @@
+@import '../../css-config/mixins.scss';
+
+
+.programmes {
+  height: 445px;
+  width: 100%;
+
+  .Cover-Image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .dim {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%);
+      top: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .programmes_Content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+    }
+
+    h1 {
+      padding-top: 110px;
+      font-size: 78px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: var(--hFont);
+    }
+
+    p {
+      position: absolute;
+      font-size: 20px;
+      color: #ffffff;
+      line-height: 1.5;
+      text-align: center;
+      align-items: center;
+      text-align: justify;
+      padding: 0px 135px 0px 135px;
+      font-family: var(--pFont);
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes {
+    .Cover-Image {
+      .programmes_Content {
+        width: 90%;
+
+        h1 {
+          font-size: 30px;
+          padding: 130px 32px 3px 0px;
+        }
+
+        p {
+          font-size: 16px;
+          padding: 0px 0px 0px 32px;
+        }
+      }
+    }
+  }
+}
+
+.programmes_Heading {
+  text-align: center;
+  padding: 0 20px;
+
+  h1 {
+    font-size: 60px;
+    color: black;
+    opacity: 58%;
+    margin-top: 15px;
+    font-family: 'K2D', sans-serif;
+  }
+
+  p {
+    font-size: 18px;
+    color: black;
+    opacity: 78%;
+    font-family: var(--pFont);
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      padding: 10px 0px 0px 0px;
+    }
+  }
+}
+
+// Courses Disturbution 
+.course_Distrubution {
+  height: 600px;
+  width: 850px;
+  position: relative;
+  left: 420px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.BIBM,
+.BIHM {
+  z-index: 9;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.Course_BIHM{
+  z-index: 1;
+}
+.container{
+  z-index: -1;
+}
+.Course_BIHM,
+.Course_BIBM {
+  overflow: hidden;
+  // z-index: 0;
+}
+.Course_BIHM:hover{
+  img{
+    transform: scale(1.1);
+  }
+}
+.Course_BIHM img,
+.Course_BIBM img {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.BIBM {
+  width: 200px;
+  height: 100px;
+  background-color: #74C044;
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  z-index: 1;
+
+  .course_Name {
+    p {
+      font-size: 50px;
+      color: #fff;
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      padding: 20px;
+
+    }
+  }
+}
+
+.Course_BIBM {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(92, 25, 25);
+  border-radius: 10px;
+  left: 0px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hat {
+    display: none;
+  }
+
+  .course_Distrubution {
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    .BIBM {
+      width: 50%;
+      top: 10;
+      left: 0px;
+    }
+
+    .BIHM {
+      width: 50%;
+      top: 45px;
+      left: 178px;
+      z-index: 1000;
+    }
+
+    .Course_BIHM,
+    .Course_BIHM {
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+// 
+.BIHM {
+  width: 200px;
+  height: 100px;
+  background-color: #9DCDBD;
+  border-radius: 10px;
+  position: relative;
+  top: -100px;
+  left: 550px;
+  z-index: 100;
+
+  .course_Names {
+    p {
+      font-size: 50px;
+      color: #21409A;
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      padding: 20px;
+    }
+  }
+}
+
+.Course_BIHM {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  background-color: rgb(92, 25, 25);
+  border-radius: 10px;
+  left: 450px;
+  top: -108%;
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+// Hat
+.hat {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.hat img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  left: 1440px;
+  top: 29px
+}
+
+.hat img:first-child {
+  top: -260%;
+  left: 80px;
+}
+
+.hat img:last-child {
+  top: -88px;
+  left: 675%;
+}

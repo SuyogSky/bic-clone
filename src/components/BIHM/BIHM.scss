@@ -1,0 +1,158 @@
+@import '../../css-config/mixins.scss';
+
+.BIHM_Container {
+  height: 445px;
+  align-items: center;
+  width: 100%;
+
+  .BIHM_Photo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+    }
+  }
+}
+
+.BIHM_Heading {
+  position: relative;
+  height: 100px;
+  width: 70%;
+  border-radius: 8px;
+  background: #D43F45;
+  flex-shrink: 0;
+  left: 258px;
+  top: -50px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  p {
+    position: relative;
+    color: #FFF;
+    font-size: 30px;
+    font-family: var(--pFont);
+    font-weight: Bold;
+    text-align: center;
+    top: 30px;
+  }
+}
+
+.about_BIHM {
+  height: 500px;
+  width: 100%;
+  text-align: justify;
+  padding: 0px 63% 0px 255px;
+
+  .contains_BIHM {
+    display: flex;
+    align-items: center;
+
+    .about_Image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+
+      .Nailshika_Image {
+        width: 480px;
+        height: 400px;
+        position: relative;
+        left: 560px;
+        top: 40px;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+      }
+
+      .frame {
+        display: flex;
+        position: relative;
+        left: -120px;
+
+        .red_BIHM,
+        .blue_BIHM {
+          height: 100px;
+          width: 100px;
+        }
+
+        .red_BIHM {
+          position: relative;
+          background-color: red;
+          top: -385px;
+          left: 520px;
+          border-radius: 10px 0px 0px 0px;
+          z-index: -1;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+        }
+
+        .blue_BIHM {
+          background-color: blue;
+          position: relative;
+          left: 840px;
+          top: -40px;
+          border-radius: 0px 0px 10px 0px;
+          z-index: -1;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+
+        }
+      }
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      margin: -160px 0px 0px -490px;
+
+
+      h1 {
+        color: #D43F45;
+        text-align: justify;
+        font-size: 50px;
+        font-family: var(--sFont);
+        font-weight: 800;
+      }
+
+      p {
+        position: relative;
+        color: rgba(0, 0, 0, 0.50);
+        text-align: justify;
+        font-size: 20px;
+        font-family: var(--sFont);
+        font-weight: 500;
+        width: 500px;
+        top: 30px;
+
+      }
+    }
+  }
+}
+
+.BIHM_Module {
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    color: #000;
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--sFont);
+    font-weight: 700;
+    padding-top: 30px;
+  }
+
+  p {
+    color: #6B6B6B;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--pFont);
+    font-weight: 500;
+    padding: 10px 27% 0px 27%;
+  }
+}
