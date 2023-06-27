@@ -1,29 +1,67 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Slideshow.scss";
 
 const Slideshow = () => {
-    return (
-        <>
-        {/* SlideShow */}
-            <div className="Slideshow">
-                <div className="left_Image">
-                    <img src={require("../../assets/Slideshow/Img1.jpg")} alt="Image" className="Image1" />
-                    <img src={require("../../assets/Slideshow/Img2.jpg")} alt="Image" className="Image2" />
-                    <img src={require("../../assets/Slideshow/Img3.png")} alt="Image" className="Image3" />
-                </div>
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-                <div className="main_Image">
-                    <img src={require("../../assets/Slideshow/Img7.png")} alt="Image" className="Image7" />
-                </div>
+  const slides = [
+    require("../../assets/Slideshow/Img1.jpg"),
+    require("../../assets/Slideshow/Img2.jpg"),
+    require("../../assets/Slideshow/Img3.png"),
+    require("../../assets/Slideshow/Img4.png"),
+    require("../../assets/Slideshow/Img5.png"),
+    require("../../assets/Slideshow/Img6.webp"),
+    require("../../assets/Slideshow/Img7.png"),
+  ];
 
-                <div className="right_Image">
-                    <img src={require("../../assets/Slideshow/img5.png")} alt="Image" className="Image4" />
-                    <img src={require("../../assets/Slideshow/Img7.png")} alt="Image" className="Image5" />
-                    <img src={require("../../assets/Slideshow/Img7.png")} alt="Image" className="Image6" />
-                </div>
-            </div>
-        </>
-    );
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000); 
+
+    return () => {
+      clearInterval(interval); 
+    };
+  }, []);
+
+  return (
+    <>
+      <div className="Slideshow">
+        <div className="left_Image">
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide}
+              alt="Image"
+              className={`Image${index + 1} ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
+            />
+          ))}
+        </div>
+        <div className="main_Image">
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide}
+              alt="Image"
+              className={`Image7 ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
+            />
+          ))}
+        </div>
+        <div className="right_Image">
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              src={slide}
+              alt="Image"
+              className={`Image${index + 4} ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Slideshow;

@@ -37,9 +37,6 @@ const BIHM = () => {
                 <p>Acquire a thorough comprehension of programming languages, information systems,
                     software and hardware technologies, and various other related topics.</p>
             </div>
-
-
-
         </>
     );
 };

@@ -40,7 +40,7 @@ const BIBM = () => {
                     software and hardware technologies, and various other related topics.</p>
             </div>
 
-            {/* Slider */}
+
             <div className="module_Slider">
                 <button
                     className={`sliderButton ${activeYear === 'Year 1' ? 'active' : ''}`}
@@ -292,7 +292,7 @@ const BIBM = () => {
                     </>
                 }
             </div>
-        </>
+        </> 
     );
 };
 

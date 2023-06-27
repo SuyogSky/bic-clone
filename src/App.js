@@ -13,17 +13,14 @@ import Admission from "./components/Admission/Admission";
 const App = () => {
   return (
     <>
-      <NavBar />
-      {/* <Programmes />
-      <Group/>
-      <BIHM/>
+      {/* <NavBar /> */}
+      {/* <Programmes /> */}
+      {/* <Group/> */}
+      {/* <BIHM/>
       <Module/>
       <BIBM/> */}
-      <Slideshow />
-      <Admission />
-
-
-
+      {/* <Slideshow /> 
+      <Admission />  */}
     </>
   )
 }
