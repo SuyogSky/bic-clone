@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import './NavBar.scss'
 import Logo from '../../assets/Images/biratnagar-normal-logo.svg'
-const NavBar = () => {
+import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
+import { MdLocationOn } from 'react-icons/md'
+import { useNavigate } from "react-router-dom";
+
+const NavBar = ({pos}) => {
+
+  const navigate = useNavigate();
+
+  // For Scroll Effect On Navigation Bar
   const [scrolled, setScrolled] = useState(false);
-  const [scrollHeight, setScrollHeight] = useState(0)
 
   window.onscroll = () => {
     if(window.scrollY >= 150 ){
@@ -13,25 +20,72 @@ const NavBar = () => {
       setScrolled(false)
     }
   }
+
+
+  // For Menu Button on Responsive Navigation Bar
+  const [active, setActive] = useState(false);
+  const menuClicked = () => {
+      if(active){
+          setActive(false)
+      }
+      else{
+          setActive(true)
+      }
+  }
+
+  // courses hover effect
+  const [drop, setDrop] = useState(false);
+  const [drop2, setDrop2] = useState(false);
+  const mouseEnter = () => {
+    setDrop(true)
+  }
+
+  const mouseLeave = () => {
+    setDrop(false)
+  }
+
+  const mouseEnter2 = () => {
+    setDrop2(true)
+  }
+
+  const mouseLeave2 = () => {
+    setDrop2(false)
+  }
+
   return(
     <>
-      <div className="top-bar">
-        <p>Sunny</p>
-        <p>Biratnagag</p>
-      </div>
-      <header className="navigation-bar">
-        <nav className={scrolled?'sticky':''}>
-            <img src={Logo} alt="" className="logo"/>
-            <ul>
-                <li><a href="" className="active">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Our Partners</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-                <li><a href="">Programmes</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div className="top">
+          <p><BsFillTelephoneFill/><span>+021-500050</span>,&nbsp;&nbsp;<span>+021-500170</span>,&nbsp;&nbsp;<span>+977-9801009090</span></p>
+          <p><MdLocationOn/>Biratnagar 5, Bhrikuti Chowk</p>
+        </div>
+        <header className="nav-bar">
+          <nav className={`${pos} ${scrolled?'sticky':''}`}>
+              <img src={Logo} alt="" className="logo"/>
+              <ul className={`${active? 'active':''}`}>
+              <ul className={`${active? 'active':''}`}>
+                  <li onClick={()=>navigate('/')}>Home</li>
+                  <li onClick={()=>navigate('/about')}>About Us</li>
+                  <li onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
+                    Courses
+                    <ul className={`courses ${drop?'active':''}`}>
+                      <li onClick={()=>navigate('/bibm')}>BIBM</li>
+                      <li onClick={()=>navigate('/bihm')}>BIHM</li>
+                    </ul>
+                  </li>
+                  <li onClick={()=>navigate('/partners')}>Our Partners</li>
+                  <li onClick={()=>navigate('/about')}>Events</li>
+                  <li onClick={()=>navigate('/life')}>Life At BIC</li>
+                  <li onClick={()=>navigate('/blogs')}>Blogs</li>
+                  <li onClick={()=>navigate('/enquire')}>Enquire</li>
+              </ul>
+              </ul>
+              <div className={`menu-btn ${active?'active': ''}`} onClick={()=>menuClicked()}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+          </nav>
+        </header>
   </>
 
   )
