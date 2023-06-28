@@ -5,6 +5,7 @@ import Captcha from '../../assets/Enquire/recaptcha-logo.png'
 import { IoMdMail } from 'react-icons/io';
 import { FaUserGraduate } from 'react-icons/fa';
 import { BiLinkAlt } from 'react-icons/bi';
+import EnquireImg from '../../assets/Enquire/enquire.png'
 
 const Enquire = () => {
     return (
@@ -12,7 +13,7 @@ const Enquire = () => {
             <NavBar pos='sticky'/>
             <section className="enquire">
                 <div className="image">
-
+                    <img src={EnquireImg} alt="" />
                 </div>
 
                 <div className="enquire-container">

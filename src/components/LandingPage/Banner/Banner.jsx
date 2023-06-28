@@ -4,6 +4,7 @@ import Logo from '../../../assets/Images/biratnagar-normal-logo.svg'
 import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
 import { MdLocationOn } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
+import BannerImg from '../../../assets/Landing/landing-banner.png'
 
 const Banner = () => {
 
@@ -64,7 +65,7 @@ const Banner = () => {
               <ul className={`${active? 'active':''}`}>
                   <li onClick={()=>navigate('/')}>Home</li>
                   <li onClick={()=>navigate('/about')}>About Us</li>
-                  <li onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
+                  <li onClick={()=>navigate('/programs')} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
                     Courses
                     <ul className={`courses ${drop?'active':''}`}>
                       <li onClick={()=>navigate('/bibm')}>BIBM</li>
@@ -86,19 +87,20 @@ const Banner = () => {
           </nav>
         </header>
 
-        <div className="container">
-          <div className="content">
+        <div className="banner-container">
+          <div className="banner-content">
             <p>Embrace Your Future: Discover & Learn.</p>
             <h1><span><h1>B</h1>iratnagar</span> <h1>I</h1>nternational <h1>C</h1>ollege</h1>
             <button><BsBookmarks/>&nbsp;Apply Now</button>
           </div>
-          <div className="image">
-          </div>
-
           <span className="bubble bubble1"></span>
           <span className="bubble bubble2"></span>
           <span className="bubble bubble3"></span>
         </div>
+
+        <div className="image">
+            <img src={BannerImg} alt="" />
+          </div>
       </section>
     </>
   )

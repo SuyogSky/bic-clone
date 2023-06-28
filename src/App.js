@@ -11,6 +11,7 @@ import BlogPage from "./components/BlogPage/BlogPage";
 import Footer from "./components/Footer/Footer";
 import BIBM from "./components/Courses/BIBM/BIBM";
 import BIHM from "./components/Courses/BIHM/BIHM";
+import Programs from './components/Courses/Programes/Programmes'
 
 const App = () => {
   return(
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/life" element={<LifeAtBic/>}></Route>
           <Route path="/blogs" element={<BlogPage/>}></Route>
           <Route path="/enquire" element={<Enquire/>}></Route>
+          <Route path="/programs" element={<Programs/>}></Route>
           <Route path="/bibm" element={<BIBM/>}></Route>
           <Route path="/bihm" element={<BIHM/>}></Route>
         </Routes>

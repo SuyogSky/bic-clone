@@ -137,6 +137,7 @@
                         display: none;
                         opacity: 0;
                         transition: all 0.5s ease-in-out;
+                        z-index: 100;
                         &.active{
                             transition: all 0.5s ease-in-out;
                             display: inline-block;

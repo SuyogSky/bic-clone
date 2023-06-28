@@ -13,6 +13,10 @@
         width: 600px;
         height: 600px;
         background-color: gray;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
     }
     .enquire-container{
         h2{

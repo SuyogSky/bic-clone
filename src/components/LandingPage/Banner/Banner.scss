@@ -2,8 +2,9 @@
 
 .banner{
     width: 100%;
-    min-height: 100vh;
+    height: calc(100vh - 30px);
     background-color: white;
+    position: relative;
     @include md{
         background-image: url('../../../assets/Landing/banner1.png');
         background-size: cover;
@@ -47,6 +48,7 @@
         }
     }
     .navigation-bar{
+        position: relative;
         z-index: 9;
         margin-top: 30px;
         background-color: white;
@@ -206,7 +208,7 @@
         }
     }
 
-    .container{
+    .banner-container{
         width: 100%;
         padding: 0 8%;
         position: absolute;
@@ -219,7 +221,7 @@
         @include lg{
             transform: translateY(-40%);
         }
-        .content{
+        .banner-content{
             p{
                 font-weight: 700;
                 font-size: 24px;
@@ -258,7 +260,7 @@
                 font-size: 16px;
                 font-weight: 700;
                 cursor: pointer;
-                position: relative;
+                // position: relative;
                 overflow: hidden;
                 transition: all 1s ease;
                 display: flex;
@@ -315,25 +317,7 @@
                 }
             }
         }
-        .image{
-            width: 450px;
-            height: 450px;
-            background-image: url('../../../assets/Landing/landing-banner.png');
-            border: 2px solid #ECF4F8;
-            background-color: white;
-            background-size: cover;
-            border-radius: 50%;
-            transition: all 1s ease;
-            animation: hover 4s ease-in-out 0s infinite;
-            @include lg{
-                width: 300px;
-                height: 300px;
 
-            }
-            @include md{
-                display: none;
-            }
-        }
         
         // Bubbles Animation
         @include md{
@@ -376,6 +360,31 @@
             border: 5px solid #ECF4F8;
             animation: bubble1 20s ease-in 4s infinite;
             z-index: -1;
+        }
+    }
+    .image{
+        // width: 450px;
+        height: 500px;
+        transition: all 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        img{
+            animation: hover 4s ease-in-out 0s infinite;
+            height: 110%;
+            z-index: 1;
+        }
+        @include lg{
+            width: 300px;
+            height: 300px;
+        }
+        @include md{
+            display: none;
         }
     }
 }
