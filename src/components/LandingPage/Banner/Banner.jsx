@@ -5,6 +5,7 @@ import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
 import { MdLocationOn } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 import BannerImg from '../../../assets/Landing/landing-banner.png'
+import { click } from "@testing-library/user-event/dist/click";
 
 const Banner = () => {
 
@@ -45,13 +46,15 @@ const Banner = () => {
     setDrop(false)
   }
 
-  const mouseEnter2 = () => {
-    setDrop2(true)
+  const clicked = () => {
+    if(drop2){
+      setDrop2(false)
+    }
+    else{
+      setDrop2(true)
+    }
   }
 
-  const mouseLeave2 = () => {
-    setDrop2(false)
-  }
   return(
     <>
       <section className="banner">
@@ -65,15 +68,16 @@ const Banner = () => {
               <ul className={`${active? 'active':''}`}>
                   <li onClick={()=>navigate('/')}>Home</li>
                   <li onClick={()=>navigate('/about')}>About Us</li>
-                  <li onClick={()=>navigate('/programs')} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
+                  <li onClick={()=>clicked()} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
                     Courses
-                    <ul className={`courses ${drop?'active':''}`}>
+                    <ul className={`courses ${drop?'active':''} ${clicked?'clicked':''}`}>
+                      <li onClick={()=>navigate('/programs')}>Programs</li>
                       <li onClick={()=>navigate('/bibm')}>BIBM</li>
                       <li onClick={()=>navigate('/bihm')}>BIHM</li>
                     </ul>
                   </li>
                   <li onClick={()=>navigate('/partners')}>Our Partners</li>
-                  <li onClick={()=>navigate('/about')}>Events</li>
+                      <li onClick={()=>navigate('/admission')}>Admission</li>
                   <li onClick={()=>navigate('/life')}>Life At BIC</li>
                   <li onClick={()=>navigate('/blogs')}>Blogs</li>
                   <li onClick={()=>navigate('/enquire')}>Enquire</li>

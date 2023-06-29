@@ -44,12 +44,13 @@ const NavBar = ({pos}) => {
     setDrop(false)
   }
 
-  const mouseEnter2 = () => {
-    setDrop2(true)
-  }
-
-  const mouseLeave2 = () => {
-    setDrop2(false)
+  const clicked = () => {
+    if(drop2){
+      setDrop2(false)
+    }
+    else{
+      setDrop2(true)
+    }
   }
 
   return(
@@ -59,26 +60,26 @@ const NavBar = ({pos}) => {
           <p><MdLocationOn/>Biratnagar 5, Bhrikuti Chowk</p>
         </div>
         <header className="nav-bar">
-          <nav className={`${pos} ${scrolled?'sticky':''}`}>
+          <nav className={scrolled?'sticky':''}>
               <img src={Logo} alt="" className="logo"/>
-              <ul className={`${active? 'active':''}`}>
               <ul className={`${active? 'active':''}`}>
                   <li onClick={()=>navigate('/')}>Home</li>
                   <li onClick={()=>navigate('/about')}>About Us</li>
-                  <li onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
+                  <li onClick={()=>clicked()} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
                     Courses
-                    <ul className={`courses ${drop?'active':''}`}>
+                    <ul className={`courses ${drop?'active':''} ${clicked?'clicked':''}`}>
+                      <li onClick={()=>navigate('/programs')}>Programs</li>
                       <li onClick={()=>navigate('/bibm')}>BIBM</li>
                       <li onClick={()=>navigate('/bihm')}>BIHM</li>
                     </ul>
                   </li>
                   <li onClick={()=>navigate('/partners')}>Our Partners</li>
-                  <li onClick={()=>navigate('/about')}>Events</li>
+                      <li onClick={()=>navigate('/admission')}>Admission</li>
                   <li onClick={()=>navigate('/life')}>Life At BIC</li>
                   <li onClick={()=>navigate('/blogs')}>Blogs</li>
                   <li onClick={()=>navigate('/enquire')}>Enquire</li>
               </ul>
-              </ul>
+
               <div className={`menu-btn ${active?'active': ''}`} onClick={()=>menuClicked()}>
                 <span></span>
                 <span></span>

@@ -11,7 +11,10 @@
     padding: 0 8%;
     position: fixed;
     top: 0;
-    z-index: 100001;
+    z-index: 101;
+    @include sm{
+        display: none;
+    }
     p{
         color: #21409A;
         display: flex;
@@ -19,16 +22,16 @@
         justify-content: center;
         font-family: var(--pFont);
         font-size: 12px;
+        @include md{
+            font-size: 10px;
+        }
         svg{
             margin-right: 5px;
         }
         span{
             transition: all 0.5s ease;
-            color: black;
+            color: #21409A;
             cursor: pointer;
-            &:hover{
-                color: #21409A;
-            }
         }
         &:last-child{
             svg{
@@ -38,7 +41,8 @@
     }
 }
 .nav-bar{
-    z-index: 9000;
+    position: relative;
+    z-index: 9;
     margin-top: 30px;
     background-color: white;
     box-shadow: 0 0 10px black;
@@ -47,8 +51,8 @@
         width: 100%;
         text-align: center;
         transition: all 0.5s ease;
-        z-index: 100000;
-        @include lg{
+        z-index: 100;
+        @include btn{
             position: fixed;
             left: 0;
             top: 30px;
@@ -58,6 +62,9 @@
             justify-content: space-between;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            @include sm{
+                top: 0;
+            }
         }
         &.sticky{
             position: fixed;
@@ -69,6 +76,9 @@
             justify-content: space-between;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            @include sm{
+                top: 0;
+            }
             ul{
                 width: auto;
                 background: none;
@@ -92,7 +102,7 @@
         ul{
             background-color: #ECF4F8;
             width: 100%;
-            @include lg{
+            @include btn{
                 position: fixed;
                 top: -100%;
                 left: 0;
@@ -103,14 +113,14 @@
                 flex-direction: column;
                 transition: all 0.5s ease;
                 &.active{
-                    top: 110px;
+                    top: 80px;
                     padding: 20px 0;
                 }
             }
             li{
                 display: inline-block;
                 list-style: none;
-                margin: 20px 30px;
+                margin: 20px;
                 cursor: pointer;
                 color: black;
                 transition: all 0.5s ease;
@@ -137,7 +147,10 @@
                         display: none;
                         opacity: 0;
                         transition: all 0.5s ease-in-out;
-                        z-index: 100;
+                        @include btn{
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                         &.active{
                             transition: all 0.5s ease-in-out;
                             display: inline-block;
@@ -165,7 +178,7 @@
             justify-content: center;
             gap: 4px;
             cursor: pointer;
-            @include lg{
+            @include btn{
                 display: flex;
             }
             span{

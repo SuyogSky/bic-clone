@@ -9,32 +9,235 @@ import assessment from "../../assets/Images/Assessment.png";
 import buisness_exp from "../../assets/LifeStyle/b_exp.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { useRef, useEffect, useLayoutEffect } from "react";
+import NavBar from "../NavBar/NavBar";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./slider_css/slider.css";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-
+import { ScrollTrigger } from "gsap/all";
 import slide_image_1 from "../LifeAtBic/imageSlider/images/slide-1.png";
 import slide_image_2 from "../LifeAtBic/imageSlider/images/slide-2.png";
 import slide_image_3 from "../LifeAtBic/imageSlider/images/slide-3.png";
-
-import slide_image_11 from "../LifeAtBic/imageSlider/images2/img_1.jpg";
-import slide_image_22 from "../LifeAtBic/imageSlider/images2/img_2.jpg";
-import slide_image_33 from "../LifeAtBic/imageSlider/images2/img_3.jpg";
-import slide_image_44 from "../LifeAtBic/imageSlider/images2/img_4.jpg";
-import slide_image_55 from "../LifeAtBic/imageSlider/images2/img_5.jpg";
-import slide_image_66 from "../LifeAtBic/imageSlider/images2/img_6.jpg";
-import slide_image_77 from "../LifeAtBic/imageSlider/images2/img_7.jpg";
-import NavBar from "../NavBar/NavBar";
+import gsap from "gsap";
+import { useState } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 const LifeStyle = () => {
+  const imageRef = useRef(null);
+  const anotherRef = useRef(null);
+  const anotherRef2 = useRef(null);
+  const anotherRef3 = useRef(null);
+  const anotherRef4 = useRef(null);
+  const anotherRef5 = useRef(null);
+  const anotherRef6 = useRef(null);
+  const anotherRef7 = useRef(null);
+
+  useLayoutEffect(() => {
+    const el1 = imageRef.current;
+    const el2 = anotherRef.current;
+    const el3 = anotherRef2.current;
+    const el4 = anotherRef3.current;
+    const el5 = anotherRef4.current;
+    const el6 = anotherRef5.current;
+    const el7 = anotherRef6.current;
+    const animation1 = gsap.fromTo(
+      el1,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "linear",
+      }
+    );
+
+    const animation2 = gsap.fromTo(
+      el2,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "linear",
+      }
+    );
+
+    const animation3 = gsap.fromTo(
+      el3,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      }
+    );
+
+    const animation4 = gsap.fromTo(
+      el4,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      }
+    );
+
+    const animation5 = gsap.fromTo(
+      el5,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      }
+    );
+
+    const animation6 = gsap.fromTo(
+      el6,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      }
+    );
+
+    const animation7 = gsap.fromTo(
+      el7,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      }
+    );
+
+    ScrollTrigger.create({
+      trigger: el1,
+      animation: animation1,
+    });
+
+    ScrollTrigger.create({
+      trigger: el2,
+      animation: animation2,
+    });
+
+    ScrollTrigger.create({
+      trigger: el3,
+      animation: animation3,
+    });
+    ScrollTrigger.create({
+      trigger: el4,
+      animation: animation4,
+    });
+    ScrollTrigger.create({
+      trigger: el5,
+      animation: animation5,
+    });
+    ScrollTrigger.create({
+      trigger: el6,
+      animation: animation6,
+    });
+    ScrollTrigger.create({
+      trigger: el7,
+      animation: animation7,
+    });
+  }, []);
+
+  // useLayoutEffect(() => {
+  //   const el1 = imageRef.current;
+  //   // const el2 = anotherRef.current;
+  //   // const el3 = anotherRef2.current;
+  //   // const el4 = anotherRef3.current;
+  //   // const el5 = anotherRef4.current;
+  //   // const el6 = anotherRef5.current;
+  //   // const el7 = anotherRef6.current;
+  //   // const el8 = anotherRef7.current;
+
+  // //   gsap.fromTo(
+  // //     [el1],
+  // //     { opacity: 0, y: 100 },
+  // //     {
+  // //       opacity: 1,
+  // //       y: 0,
+  // //       duration: 2,
+  // //       ease: 'power2.inOut',
+  // //       scrollTrigger: {
+  // //         trigger: [el1],
+  // //       },
+  // //     }
+  // //   );
+  // // }, []);
+
+  // // useLayoutEffect(() => {
+  // //   const el2 = anotherRef.current;
+  // //   gsap.fromTo(
+  // //     [el2],
+  // //     { opacity: 0, y: 100 },
+  // //     {
+  // //       opacity: 1,
+  // //       y: 0,
+  // //       duration: 2,
+  // //       ease: 'power2.inOut',
+  // //       scrollTrigger: {
+  // //         trigger: [el2],
+  // //       },
+  // //     }
+  // //   );
+  // // }, []);
+
+  const [slide, setSlide] = useState(0)
+
+  const nextSlide = () => {
+    if(slide==-200){
+        setSlide(0)
+    }
+    else{
+        setSlide(slide-100);
+    }
+}
+
+const prevSlide = () => {
+    if(slide == 0){
+        setSlide(-200)
+    }
+    else{
+        setSlide(slide+100);
+    }
+}
   return (
     <>
-    <NavBar/>
-      <div className="top-container" style={{ position: "absolute" }}>
+      <NavBar />
+      <div className="top-container">
         <div className="top-first-partition">
-          <div className="top-container-first-wrapper">
+          <div className="text">
+            <h1>Biratnagar</h1>
+            <h1>International</h1>
+            <h1>College</h1>
+          </div>
+          <div className="slider">
+            <div className="slides">
+              <div className="slide" style={{'margin-left':`${slide}%`}}>
+                <img src={slide_image_1} className="slide_lifestyle_img" alt="slide_image"/>
+              </div>
+
+              <div className="slide">
+                <img src={slide_image_2} className="slide_lifestyle_img" alt="slide_image"/>
+              </div>
+
+              <div className="slide">
+                <img src={slide_image_3} className="slide_lifestyle_img" alt="slide_image"/>
+              </div>
+            </div>
+          </div>
+          {/* <div className="top-container-first-wrapper">
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
@@ -61,28 +264,52 @@ const LifeStyle = () => {
               className="swiper_container"
             >
               <SwiperSlide>
-                <img src={slide_image_1} className="slide_lifestyle_img" alt="slide_image" />
+                <img
+                  src={slide_image_1}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_image_2}  className="slide_lifestyle_img"  alt="slide_image" />
+                <img
+                  src={slide_image_2}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_image_3}  className="slide_lifestyle_img"  alt="slide_image" />
+                <img
+                  src={slide_image_3}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_image_1}  className="slide_lifestyle_img"  alt="slide_image" />
+                <img
+                  src={slide_image_1}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_image_2} className="slide_lifestyle_img"   alt="slide_image" />
+                <img
+                  src={slide_image_2}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={slide_image_3}  className="slide_lifestyle_img"  alt="slide_image" />
+                <img
+                  src={slide_image_3}
+                  className="slide_lifestyle_img"
+                  alt="slide_image"
+                />
               </SwiperSlide>
               <div className="slider-controler">
                 <div className="swiper-pagination"></div>
               </div>
             </Swiper>
-          </div>
+          </div> */}
         </div>
         <div className="top-second-partition">
           <div className="top-second-first">
@@ -103,6 +330,7 @@ const LifeStyle = () => {
                 <div className="swiper-pagination"></div>
                 <div className="before-lifestyle">
                   <button
+                    onClick={()=>prevSlide()}
                     style={{
                       width: "100%",
                       height: "100%",
@@ -115,6 +343,7 @@ const LifeStyle = () => {
                 </div>
                 <div className="after-lifestyle">
                   <button
+                    onClick={()=>nextSlide()}
                     style={{
                       width: "100%",
                       height: "100%",
@@ -131,7 +360,7 @@ const LifeStyle = () => {
             <p></p>
           </div>
         </div>
-        <div className="second-teaching-lifestyle">
+        <div className="second-teaching-lifestyle" ref={imageRef}>
           <div className="teaching-lifestyle-content">
             <h2>Teaching that takes you Forward</h2>
             <p>
@@ -142,7 +371,7 @@ const LifeStyle = () => {
               knowledge.
             </p>
             <div className="teaching-lifestyle-buttons-area">
-              <div className="teaching-lifestyle-button">Enquire Now</div>
+              <button className="teaching-lifestyle-button">Enquire Now</button>
               <div className="teaching-lifestyle-button" id="contact_us_btn">
                 Enquire Now
               </div>
@@ -152,7 +381,7 @@ const LifeStyle = () => {
             <img src={teaching} alt="" />
           </div>
         </div>
-        <div className="third-teaching-lifestyle">
+        <div className="third-teaching-lifestyle" ref={anotherRef}>
           <img src={assessment} alt="" />
           <section className="third-teaching-content-section">
             <div className="third-teaching-content">
@@ -166,7 +395,7 @@ const LifeStyle = () => {
             </div>
           </section>
         </div>
-        <div className="fourth-content-wrapper">
+        <div className="fourth-content-wrapper" ref={anotherRef2}>
           <h3>15-Day Summer-Camp at The University of Wolverhampton, UK</h3>
           <div className="fourth-content-wrapper-circle">Summer Camp 2023</div>
           <section className="fourth-content-lifestyle">
@@ -190,7 +419,7 @@ const LifeStyle = () => {
             </div>
           </section>
         </div>
-        <div className="fifth-content-experience">
+        <div className="fifth-content-experience" ref={anotherRef3}>
           <h2>Business Experience in Thailand</h2>
           <div className="fifth-content-experience-card">
             {/* <img src={buisness_exp} alt="" /> */}
@@ -212,7 +441,7 @@ const LifeStyle = () => {
             </div>
           </div>
         </div>
-        <div className="sixth-content-events">
+        <div className="sixth-content-events" ref={anotherRef4}>
           <h1>Events</h1>
           <div className="sixth-content-events-cards">
             <section className="events-card" id="events-card-1">
@@ -256,13 +485,15 @@ const LifeStyle = () => {
             <div className="events-card-back"></div>
           </section>
         </div>
-        <div className="seventh-content-sports">
+        <div className="seventh-content-sports" ref={anotherRef5}>
           <section className="seventh-content-sports-wrapper">
             <div className="seventh-content-sports-heading">
               <p>
                 {" "}
                 Sp <div className="ball_sports"></div> rts Week
               </p>{" "}
+              <div class="ball_sports_hand"></div>
+              <div class="ball_sports_shadow"></div>
             </div>
             <div className="seventh-content-sports-year">
               <p>
@@ -285,7 +516,7 @@ const LifeStyle = () => {
           </section>
           <div className="seventh-content-sports-back"></div>
         </div>
-        <div className="eight-content-sports-chess">
+        <div className="eight-content-sports-chess" ref={anotherRef6}>
           <div className="eight-content-sports-wrapper">
             <div className="eight-content-sports-image"></div>
             <div className="eight-content-sports-content">
@@ -304,6 +535,7 @@ const LifeStyle = () => {
           <div className="eight-content-sports-chess-back"></div>
         </div>
       </div>
+
     </>
   );
 };

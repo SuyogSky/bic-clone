@@ -51,12 +51,10 @@ const Testimonial = () => {
     }
     useEffect(()=>{
         changeSlide()
+        // setInterval(() => {
+        //     nextSlide()
+        // }, 5000);
     })
-    // useEffect(()=>{
-    //     setInterval(() => {
-    //         nextSlide()
-    //     }, 5000);
-    // })
 
     return(
         <section className="testimonial-section">

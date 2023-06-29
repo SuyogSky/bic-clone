@@ -52,19 +52,22 @@
     margin-top: 0;
     color: #000;
     text-align: center;
-    font-size: 10vh;
-    font-family: var(--sFont);
+    font-size: 9vh;
+    color: rgba(0,0,0,0.7);
+    font-family: var(--hFont);
     font-weight: 700;
     padding-top: 40px;
   }
 
   p {
+    width: 100%;
     color: #6B6B6B;
     text-align: center;
     font-size: 16px;
     font-family: var(--pFont);
     font-weight: 500;
-    padding: 10px 27% 0px 27%;
+    padding: 10px 24%;
+    padding-bottom: 0;
   }
 
   @media (max-width: 768px) {
@@ -107,8 +110,6 @@
         left: 618px;
         top: 40px;
         border-radius: 10px;
-        border: 2px solid black;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 
       }
 
@@ -154,7 +155,7 @@
         color: #204593;
         text-align: justify;
         font-size: 6vh;
-        font-family: var(--sFont);
+        font-family: var(--hFont);
         font-weight: 800;
       }
 
@@ -240,7 +241,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -35% 0px 0px 56%;
+  margin: -42% 0px 0px 56%;
 
   // Responsive styles for small screens
   @media (max-width: 768px) {
@@ -253,9 +254,7 @@
   img {
     width: 500px;
     height: 588px;
-    border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 
     // Responsive styles for small screens
     @media (max-width: 768px) {
@@ -271,7 +270,6 @@
 .Contents_DIVISION3,
 .Contents_DIVISION4,
 .Contents_DIVISION5 {
-  height: 100px;
   width: 650px;
   border-radius: 11px;
   background: rgba(217, 217, 217, 0.5);
@@ -279,8 +277,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 0px 0px 20px -60px;
+  // align-items: center;
+  margin: 0px 0px 20px -75px;
+  padding: 20px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -291,9 +290,9 @@
 
 .databaseText,
 .divisionText {
+  margin: 0;
   @media (max-width: 768px) {
     text-align: center;
-    margin-left: -310px;
   }
 }
 

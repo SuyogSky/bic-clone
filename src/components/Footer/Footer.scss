@@ -12,6 +12,13 @@ footer{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+    @include md{
+      margin-bottom: 30px;
+    }
+    @include sm{
+      flex-direction: column;
+      gap: 30px;
+    }
     img{
       height: 80px;
       cursor: pointer;
@@ -19,7 +26,10 @@ footer{
     .buttons{
       display: flex;
       align-items: center;
-      gap: 100px;
+      gap: 50px;
+      @include sm{
+        gap: 20px;
+      }
       button{
         width: 150px;
         height: 40px;
@@ -29,6 +39,10 @@ footer{
         font-family: var(--pFont);
         font-weight: 500;
         cursor: pointer;
+        @include md{
+          width: 120px;
+
+        }
         &.btn1{
           background-color: #20409A;
           color: white;
@@ -50,6 +64,13 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include sm{
+      flex-direction: column;
+      align-items: flex-start;
+      p{
+        font-size: 14px;
+      }
+    }
     .info{
       span{
         display: flex;
@@ -63,6 +84,7 @@ footer{
         svg{
           font-size: 20px;
         }
+        
       }
     }
     .pages{
@@ -72,6 +94,9 @@ footer{
         &:nth-child(2){
           margin: 30px 0;
         }
+      }
+      @include sm{
+        display: none;
       }
     }
     .social{

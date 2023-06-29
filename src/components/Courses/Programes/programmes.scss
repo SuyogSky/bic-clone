@@ -26,15 +26,15 @@
       position: absolute;
       top: 0;
       height: 100%;
-      width: 50%;
+      // width: 50%;
     }
 
     h1 {
       padding-top: 110px;
-      font-size: 78px;
+      padding-left: 130px;
+      font-size: 55px;
       color: #ffffff;
       margin-bottom: 10px;
-      text-align: center;
       font-family: var(--hFont);
     }
 
@@ -43,10 +43,9 @@
       font-size: 20px;
       color: #ffffff;
       line-height: 1.5;
-      text-align: center;
       align-items: center;
       text-align: justify;
-      padding: 0px 135px 0px 135px;
+      padding: 20px 55px 0px 135px;
       font-family: var(--pFont);
 
     }
@@ -57,12 +56,15 @@
   .programmes {
     .Cover-Image {
       .programmes_Content {
-        width: 90%;
+        // width: 90%;
 
         h1 {
           font-size: 30px;
+          width: 100%;
           line-height: 1.5;
-          padding: 130px 150px 3px 0px;
+          // padding: 130px 150px 3px 0px;
+          padding-left: 30px;
+          padding-top: 130px;
         }
 
         p {
@@ -87,13 +89,14 @@
   }
 
   p {
+    width: 100%;
     font-size: 18px;
     color: black;
     opacity: 78%;
     font-family: var(--pFont);
     font-weight: 500;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20%;
   }
 
   @media (max-width: 768px) {
@@ -102,7 +105,7 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: 14px;
       padding: 10px 0px 0px 0px;
     }
   }
@@ -186,6 +189,8 @@
   background-color: rgb(92, 25, 25);
   border-radius: 10px;
   left: 0px;
+  animation: hover2 4s ease-in-out 0s infinite;
+
 
   img {
     width: 100%;
@@ -228,6 +233,7 @@
       width: 100%;
       left: 0;
       top: 0;
+
     }
   }
 }
@@ -264,17 +270,19 @@
   position: relative;
   height: 500px;
   width: 400px;
-  background-color: rgb(92, 25, 25);
   border-radius: 10px;
   left: 450px;
   top: -108%;
   border-radius: 10px;
+
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    animation: hover2 4s ease-in-out 0s infinite;
+
   }
 }
 
@@ -283,6 +291,7 @@
   position: relative;
   width: 200px;
   height: 200px;
+
 }
 
 .hat img {
@@ -296,9 +305,24 @@
 .hat img:first-child {
   top: -260%;
   left: 80px;
+  animation: hover2 4s ease-in-out 0s infinite;
 }
 
 .hat img:last-child {
   top: -88px;
   left: 675%;
+  animation: hover2 4s ease-in-out 2s infinite;
+}
+
+
+@keyframes hover2 {
+  0%{
+      transform: translateY(0);
+  }
+  40%{
+      transform: translateY(-10px);
+  }
+  100%{
+      transform: translateY(0);
+  }
 }

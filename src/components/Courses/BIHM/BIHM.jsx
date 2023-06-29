@@ -1,6 +1,7 @@
 import React from "react";
 import "./BIHM.scss";
 import NavBar from "../../NavBar/NavBar";
+import Module from './Module/Module'
 
 const BIHM = () => {
     return (
@@ -39,6 +40,7 @@ const BIHM = () => {
                 <p>Acquire a thorough comprehension of programming languages, information systems,
                     software and hardware technologies, and various other related topics.</p>
             </div>
+            <Module/>
         </>
     );
 };

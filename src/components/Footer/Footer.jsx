@@ -4,6 +4,7 @@ import { MdLocationOn } from 'react-icons/md';
 import { BsFillTelephoneFill, BsInstagram } from 'react-icons/bs'
 import { IoMdMail } from 'react-icons/io';
 import { FiFacebook } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
 
 
 import React, { useState } from "react";
@@ -51,6 +52,7 @@ const Footer = () => {
                 <div className="social">
                     <span><FiFacebook/><p>Facebook</p></span>
                     <span><BsInstagram/><p>Instagram</p></span>
+                    <span><FaLinkedin/><p>Linked In</p></span>
                 </div>
             </div>
         </footer>

@@ -36,7 +36,7 @@ const programmes = () => {
                     </div>
                 </div>
                 <div className="Course_BIBM">
-                    <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover Image" />
+                    <img src={require("../../../assets/Programmes/Group.jpg")} alt="Cover Image" />
                 </div>
 
                 {/* Courses Disturbution BIHM */}

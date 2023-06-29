@@ -32,6 +32,13 @@
     }
 }
 
+@mixin btn {
+    // updated
+    @media only screen and (max-width: 1198px) {
+        @content;
+    }
+}
+
 @mixin xl {
     // updated
     @media only screen and (max-width: 1270px) {
