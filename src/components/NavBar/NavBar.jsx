@@ -60,7 +60,7 @@ const NavBar = ({pos}) => {
           <p><MdLocationOn/>Biratnagar 5, Bhrikuti Chowk</p>
         </div>
         <header className="nav-bar">
-          <nav className={scrolled?'sticky':''}>
+          <nav className={`${pos} ${scrolled?'sticky':''}`}>
               <img src={Logo} alt="" className="logo"/>
               <ul className={`${active? 'active':''}`}>
                   <li onClick={()=>navigate('/')}>Home</li>

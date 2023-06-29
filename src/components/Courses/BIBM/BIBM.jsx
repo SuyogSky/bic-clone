@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./BIBM.scss";
 import NavBar from '../../NavBar/NavBar';
+import Group from '../Group/Group';
 
 const BIBM = () => {
     const [activeYear, setActiveYear] = useState('Year 1');
@@ -294,6 +295,10 @@ const BIBM = () => {
                     </>
                 }
             </div>
+            <br />
+            <br />
+
+            <Group/>
         </> 
     );
 };

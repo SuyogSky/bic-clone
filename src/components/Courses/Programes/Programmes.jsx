@@ -1,7 +1,7 @@
 import React from "react";
 import "./programmes.scss"
 import NavBar from "../../NavBar/NavBar";
-
+import Group from '../Group/Group'
 const programmes = () => {
     // js
 
@@ -55,6 +55,8 @@ const programmes = () => {
                 <img src={require("../../../assets/Programmes/hat.png")} alt="hat Image" />
                 <img src={require("../../../assets/Programmes/hat.png")} alt="hat Image" />
             </div>
+
+            <Group/>
         </>
     )
 }

@@ -2,6 +2,8 @@ import React from "react";
 import "./BIHM.scss";
 import NavBar from "../../NavBar/NavBar";
 import Module from './Module/Module'
+import Group from '../Group/Group'
+
 
 const BIHM = () => {
     return (
@@ -41,6 +43,8 @@ const BIHM = () => {
                     software and hardware technologies, and various other related topics.</p>
             </div>
             <Module/>
+            <br /><br />
+            <Group/>
         </>
     );
 };

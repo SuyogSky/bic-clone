@@ -119,11 +119,12 @@
   left: 420px;
   top: 30px;
   cursor: pointer;
+
 }
 
 .BIBM,
 .BIHM {
-  z-index: 9;
+  z-index: 5;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -214,6 +215,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    margin-bottom: 80px;
 
     .BIBM {
       width: 50%;
@@ -225,7 +227,7 @@
       width: 50%;
       top: 45px;
       left: 178px;
-      z-index: 1000;
+      z-index: 5;
     }
 
     .Course_BIHM,
@@ -247,7 +249,7 @@
   position: relative;
   top: -100px;
   left: 550px;
-  z-index: 100;
+  z-index: 5;
 
   .course_Names {
     p {
