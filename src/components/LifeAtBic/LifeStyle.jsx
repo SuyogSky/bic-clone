@@ -24,6 +24,7 @@ import gsap from "gsap";
 import { useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
+
 const LifeStyle = () => {
   const imageRef = useRef(null);
   const anotherRef = useRef(null);
@@ -150,49 +151,6 @@ const LifeStyle = () => {
       animation: animation7,
     });
   }, []);
-
-  // useLayoutEffect(() => {
-  //   const el1 = imageRef.current;
-  //   // const el2 = anotherRef.current;
-  //   // const el3 = anotherRef2.current;
-  //   // const el4 = anotherRef3.current;
-  //   // const el5 = anotherRef4.current;
-  //   // const el6 = anotherRef5.current;
-  //   // const el7 = anotherRef6.current;
-  //   // const el8 = anotherRef7.current;
-
-  // //   gsap.fromTo(
-  // //     [el1],
-  // //     { opacity: 0, y: 100 },
-  // //     {
-  // //       opacity: 1,
-  // //       y: 0,
-  // //       duration: 2,
-  // //       ease: 'power2.inOut',
-  // //       scrollTrigger: {
-  // //         trigger: [el1],
-  // //       },
-  // //     }
-  // //   );
-  // // }, []);
-
-  // // useLayoutEffect(() => {
-  // //   const el2 = anotherRef.current;
-  // //   gsap.fromTo(
-  // //     [el2],
-  // //     { opacity: 0, y: 100 },
-  // //     {
-  // //       opacity: 1,
-  // //       y: 0,
-  // //       duration: 2,
-  // //       ease: 'power2.inOut',
-  // //       scrollTrigger: {
-  // //         trigger: [el2],
-  // //       },
-  // //     }
-  // //   );
-  // // }, []);
-
   const [slide, setSlide] = useState(0)
 
   const nextSlide = () => {
@@ -212,6 +170,7 @@ const prevSlide = () => {
         setSlide(slide+100);
     }
 }
+
   return (
     <>
       <NavBar />

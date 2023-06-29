@@ -1,15 +1,76 @@
 import React from "react";
 import "./programmes.scss"
 import NavBar from "../../NavBar/NavBar";
-import Group from '../Group/Group'
-const programmes = () => {
-    // js
+import Group from '../Group/Group';
+import { useRef, useEffect, useLayoutEffect } from "react";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { useState } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
+const Programmes = () => {
+    const imageRef = useRef(null);
+    const anotherRef = useRef(null);
+    const anotherRef2 = useRef(null);
+    
+    useLayoutEffect(()=>{
+        const el1 = imageRef.current;
+        const el2 = anotherRef.current;
+        const el3 = anotherRef2.current;
+        const animation1 = gsap.fromTo(
+            el1,
+            { opacity: 0, y: 100 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "linear",
+            }
+          );
+      
+          const animation2 = gsap.fromTo(
+            el2,
+            { opacity: 0, y: 100 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "linear",
+            }
+          );
+      
+          const animation3 = gsap.fromTo(
+            el3,
+            { opacity: 0, y: 100 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power2.inOut",
+            }
+          );
+          ScrollTrigger.create({
+            trigger: el1,
+            animation: animation1,
+          });
+      
+          ScrollTrigger.create({
+            trigger: el2,
+            animation: animation2,
+          });
+      
+          ScrollTrigger.create({
+            trigger: el3,
+            animation: animation3,
+          });
+
+    }, []);
 
     return (
         <>
         <NavBar/>
             {/* Cover Photo with contains */}
-            <div className="programmes">
+            <div className="programmeP" ref={imageRef}>
                 <div className="Cover-Image">
                     <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover Image" />
                     <div className="dim"></div>
@@ -22,14 +83,14 @@ const programmes = () => {
             </div>
 
             {/* Courses */}
-            <div className="programmes_Heading">
+            <div className="programmes_Heading" ref={anotherRef}>
                 <h1>Locate Your Ideal Field of Study</h1>
                 <p>Beginning your college journey is a very personal and sacred experience that encompasses
                     a wide range of events compounding towards your growth.</p>
             </div>
 
             {/* Courses Disturbution BIBM */}
-            <div className="course_Distrubution">
+            <div className="course_Distrubution" ref={anotherRef2}>
                 <div className="BIBM">
                     <div className="course_Name">
                         <p>BIBM</p>
@@ -61,4 +122,4 @@ const programmes = () => {
     )
 }
 
-export default programmes
+export default Programmes

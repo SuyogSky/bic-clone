@@ -238,11 +238,6 @@
   }
 }
 .second-teaching-lifestyle {
-  // animation: fade-bottom 1s ease-in -4s ;
-  // animation: 3s ease-in 1s 2 reverse both paused  fade-bottom;
-  // animation: 1s linear 0s infinite alternate fade-bottom;
-
-  // animation: wipe-enter 2s ease-in-out;
   transition: opacity 1.5s easSe, transform 1.5s ease;
   width: 100%;
   height: 50vh;
@@ -1556,11 +1551,11 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .second {
-    animation: wipe-enter 1s infinite;
-  }
-}
+// @media (prefers-reduced-motion: no-preference) {
+//   .second {
+//     animation: wipe-enter 1s infinite;
+//   }
+// }
 @keyframes upDownAnimation {
   0% {
     transform: translateY(0);
