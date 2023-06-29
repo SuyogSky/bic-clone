@@ -329,7 +329,7 @@ const LifeStyle = () => {
               knowledge.
             </p>
             <div className="teaching-lifestyle-buttons-area">
-              <div className="teaching-lifestyle-button">Enquire Now</div>
+              <button className="teaching-lifestyle-button">Enquire Now</button>
               <div className="teaching-lifestyle-button" id="contact_us_btn">
                 Enquire Now
               </div>

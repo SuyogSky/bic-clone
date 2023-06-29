@@ -7,9 +7,9 @@
 }
 
 .footer-top{
-  @include xsm{
+  
     display: none;
-  } 
+
 }
 .top-container {
   width: 100%;
@@ -299,6 +299,76 @@
   // width: 513px;
   align-items: center;
   justify-content: space-between;
+  #contact_us_btn {
+    --color: #000000;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+    font-size: 17px;
+    border: 1px solid;
+    font: 16px var(--pFont);
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    @include sm{
+      font: 12px var(--pFont);
+      font-weight: bold;
+     }
+     @include xsm{
+      font: 10px var(--pFont);
+      font-weight: bold;
+     }
+   }
+  
+  //  @include lg {
+  //   width: 180px;
+  //   height: 30px;
+  // }
+  // @include smm {
+  //   width: 40%;
+  //   height: 40px;
+  // }
+   
+   #contact_us_btn::before, #contact_us_btn::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   #contact_us_btn::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   #contact_us_btn::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   #contact_us_btn:hover::before, #contact_us_btn:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   #contact_us_btn:hover {
+    color: #ffffff;
+   }
+   
+   #contact_us_btn:active {
+    filter: brightness(.8);
+   }
   .teaching-lifestyle-button {
     border-radius: 5px;
     width: 240px;
@@ -1275,19 +1345,15 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  border-radius: 10%;
   .eight-content-sports-chess-back {
     width: 30%;
     height: 80%;
-    // background-color: #20409A;
-      animation: hover 2s ease-in-out 0s infinite;
-    background-image: url('./chess.png');
+    background-color: #20409A;
     position: absolute;
-    right: -5%;
+    right: 4%;
     z-index: -100;
-    // bottom: 1%;
-    top:1%;
-    background-size: cover;
-    rotate: 45deg;
+    bottom: 1%;
   }
   .eight-content-sports-wrapper {
     display: flex;
