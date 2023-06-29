@@ -1,6 +1,8 @@
 import React from "react";
 import './Next.scss';
+import { useNavigate } from "react-router-dom";
 const Next = () => {
+    const navigate = useNavigate()
     return(
         <section className="next-section">
             <div className="next-step">
@@ -11,7 +13,7 @@ const Next = () => {
                 <div className="next-content">
                     <button>Request Information</button>
                     <button>Virtual Visit</button>
-                    <button>Apply Now</button>
+                    <button onClick={()=>navigate('/enquire')}>Apply Now</button>
                 </div>
             </div>
         </section>

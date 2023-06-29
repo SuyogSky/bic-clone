@@ -2,7 +2,9 @@ import React from "react";
 import './Courses.scss';
 import BIBM from '../../../assets/Landing/BIBM.jpg'
 import BIHM from '../../../assets/Landing/BIHM.png'
+import { useNavigate } from "react-router-dom";
 const Courses = () => {
+    const navigate = useNavigate()
     return (
         <section className="courses">
             <div className="courses-heading">
@@ -20,14 +22,14 @@ const Courses = () => {
                     <div className="design"></div>
                     <div className="content">
                         <img src={BIBM} alt="" />
-                        <button>Read More</button>
+                        <button onClick={()=>navigate('/bibm')}>Read More</button>
                     </div>
                 </div>
                 
                 <div className="card card2">
                     <div className="content">
                         <img src={BIHM} alt="" />
-                        <button>Read More</button>
+                        <button onClick={()=>navigate('/bihm')}>Read More</button>
                     </div>
                     <div className="design"></div>
                 </div>

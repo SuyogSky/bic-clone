@@ -95,7 +95,7 @@ const Banner = () => {
           <div className="banner-content">
             <p>Embrace Your Future: Discover & Learn.</p>
             <h1><span><h1>B</h1>iratnagar</span> <h1>I</h1>nternational <h1>C</h1>ollege</h1>
-            <button><BsBookmarks/>&nbsp;Apply Now</button>
+            <button onClick={()=>navigate('/enquire')}><BsBookmarks/>&nbsp;Apply Now</button>
           </div>
           <span className="bubble bubble1"></span>
           <span className="bubble bubble2"></span>

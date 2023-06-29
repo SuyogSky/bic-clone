@@ -26,18 +26,33 @@ const Visit = () => {
                 <div className="images">
                     <div className="image image1">
                         <img src={Library} alt="" />
+                        <div className="info">
+                            <p>Library</p>
+                        </div>
                     </div>
                     <div className="image image2">
                         <img src={Canteen} alt="" />
+                        <div className="info">
+                            <p>Canteen</p>
+                        </div>
                     </div>
                     <div className="image image3">
                         <img src={Lecture} alt="" />
+                        <div className="info">
+                            <p>Lecture Hall</p>
+                        </div>
                     </div>
                     <div className="image image4">
                         <img src={BasketBall} alt="" />
+                        <div className="info">
+                            <p>Basketball</p>
+                        </div>
                     </div>
                     <div className="image image5">
                         <img src={Lab} alt="" />
+                        <div className="info">
+                            <p>Computer Lab</p>
+                        </div>
                     </div>
                     
                     <div className="design2"></div>
