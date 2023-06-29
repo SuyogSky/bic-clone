@@ -1,0 +1,93 @@
+/* .Text {
+    z-index: 90;
+    display: flex;
+    position: absolute;
+    color: rgb(22, 21, 21);
+    font-weight: bold;
+    margin-top: 378px;
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: medium;
+} */
+.Christmas {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 100px;
+    column-gap: 50px;
+}
+.mainImage{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    /* border-radius: 15px; */
+}
+img {
+    /* border-radius: 5px; */
+    height: 100%;
+    width: 100%;
+}
+.firstPhoto:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.secondImage{
+    overflow: hidden;
+    border-radius: 15px;
+}
+/* .secondColumn{
+    overflow: hidden;
+} */
+.secondImage img:hover{
+    /* overflow: hidden; */
+    transition: 1s;
+    transform: scale(1.1);
+}
+.secondImage:hover~.Text1{  
+    transition: 0.5s;
+    text-decoration: underline;
+}
+.thirdImage{
+    overflow: hidden;
+    border-radius: 15px;
+}
+.thirdImage:hover~.Text2{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.thirdImage img:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.Space {
+    width: 70%;
+    column-gap: 20px;
+    display: flex;
+}
+.secondColumn {
+    height: 30%;
+    width: 70%;
+}
+.thirdColumn {
+    height: 30%;
+    width: 70%;
+}
+.firstPhoto {
+    height: 100%;
+    width: 100%;
+}
+
+.Text1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.Text2{
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+

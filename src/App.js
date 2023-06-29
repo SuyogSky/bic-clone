@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Newblog from "./Components/newBlog"
+import Admission from './Components/admission';
+import Christmas from './Components/christmas';
+import Darkness from './Components/darkness';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Admission from "./Components/admission"
+const App=()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <newBlog/> */}
+    {/* <Newblog/> */}
+    {/* <Admission/> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path='' element={<Newblog/>}></Route>
+        <Route path='/blog' element={<Admission/>}></Route>
+        <Route path='/xmas' element={<Christmas/>}></Route>
+        <Route path='/dark' element={<Darkness/>}></Route>
+      </Routes>
+    </BrowserRouter>
+
+    </>
   );
 }
 
