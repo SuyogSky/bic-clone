@@ -166,7 +166,7 @@
                 background-color: #FF8A8A;
                 box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 top: 0%;
-                right: -70px;
+                margin-left: 100px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -181,6 +181,12 @@
                 @include sm{
                     z-index: 1;
                     background-color: rgba(255, 138, 138, 0.8);
+                    margin: 0;
+                    top: 350px;
+                    margin-left: -70px;
+                }
+                @include xsm{
+                    display: none;
                 }
                 p{
                     font-family: var(--pFont);

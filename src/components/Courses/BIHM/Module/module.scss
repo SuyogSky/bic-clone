@@ -2,7 +2,7 @@
 
 .module_Slider {
     width: 1180px;
-    height: 99px;
+    // height: 99px;
     border-radius: 11px;
     background: #F2F2F2;
     position: relative;
@@ -12,12 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
 
 
     @media (max-width: 768px) {
-        height: 50px;
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 75px 0px;
         width: 90%;
     }
 }
@@ -76,6 +75,7 @@
 
 .moduleInfo {
     display: flex;
+    gap: 20px;
 }
 
 .moduleCode,
@@ -87,7 +87,6 @@
     font-family: var(--pFont);
     font-weight: 400;
     // margin: 0 37px;
-    padding-right: 50px;
 }
 
 .div_Content_Image {
