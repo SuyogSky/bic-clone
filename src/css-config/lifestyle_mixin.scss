@@ -7,7 +7,7 @@
 }
 
 @mixin sm {
-    @media only screen and (max-width: 620px) {
+    @media only screen and (max-width: 623px) {
         @content;
     }
 }
@@ -52,6 +52,12 @@
         @content;
     }
 }
+@mixin vl{
+    @media only screen and (max-width: 1830px) {
+        @content;
+    }
+}
+
 @mixin xsmh {
     @media screen and (max-height:  900px) ,screen and (max-width:430px) {
         @content;

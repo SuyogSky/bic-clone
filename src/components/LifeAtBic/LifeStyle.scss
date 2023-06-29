@@ -5,6 +5,12 @@
     font: 16px var(--pFont);
   }
 }
+
+.footer-top{
+  @include xsm{
+    display: none;
+  } 
+}
 .top-container {
   width: 100%;
   // height: 100vh;
@@ -189,6 +195,12 @@
   }
 }
 .second-teaching-lifestyle {
+  // animation: fade-bottom 1s ease-in -4s ;
+  // animation: 3s ease-in 1s 2 reverse both paused  fade-bottom;
+  // animation: 1s linear 0s infinite alternate fade-bottom;
+
+  // animation: wipe-enter 2s ease-in-out;
+  transition: opacity 1.5s easSe, transform 1.5s ease;
   width: 100%;
   height: 50vh;
   display: flex;
@@ -212,9 +224,6 @@
     // gap: 60px;
     // align-items: center;
   }
-  @include xsm {
-    height: 80vh;
-  }
   // @include xsmh{
   //     height: 55vh;
   // }
@@ -229,7 +238,8 @@
       height: 70vh;
     }
     img {
-      width: 400px;
+      // animation: hover 4s ease-in-out 0s infinite;
+      width: 600px;
       // height: 300px;
       @include lg {
         width: 300px;
@@ -260,9 +270,6 @@
       width: 70%;
       justify-content: space-between;
     }
-    @include xsm {
-      height: 90%;
-    }
     // @include xsmh{
     //     height: 70vh;
     // }
@@ -276,6 +283,7 @@
     }
     p {
       font-weight: 500;
+      text-align: justify;
       @include lg {
         // height: 60%;
         justify-content: space-around;
@@ -291,11 +299,6 @@
   // width: 513px;
   align-items: center;
   justify-content: space-between;
-  @include xsm {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-  }
   .teaching-lifestyle-button {
     border-radius: 5px;
     width: 240px;
@@ -315,10 +318,6 @@
       width: 40%;
       height: 40px;
     }
-    @include xsm {
-      width: 100%;
-      height: 42px;
-    }
   }
   #contact_us_btn {
     background-color: white;
@@ -328,7 +327,7 @@
 }
 .third-teaching-lifestyle {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -340,18 +339,18 @@
     // justify-content: space-between;
   }
   @include smm {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    // align-items: center;
+    justify-content: space-around;
+    align-items: center;
   }
   // @include xsmh{
   //     height: 50vh;
   // }
 
   img {
-    width: 400px;
+    width: 600px;
     // height: 300px;
     @include lg {
       width: 300px;
@@ -398,6 +397,7 @@
         }
       }
       p {
+        text-align: justify;
         font-weight: 500;
         color: rgba(0, 0, 0, 0.5);
         @include lg {
@@ -412,7 +412,7 @@
 }
 .fourth-content-wrapper {
   display: flex;
-  height: 90vh;
+  height: 70vh;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -426,18 +426,18 @@
     height:170vh;
   }
   @include smm{
-    height: 120vh;
+    height: 80vh;
   }
   h3 {
     display: block;
-    text-align: start;
+    text-align: center;
     height: 100px;
-    width: 73%;
+    width: 100%;
     left: 30px;
-    display: flex;
+    // display: flex;
     align-items: center;
     color: rgba(0, 0, 0, 0.7);
-    font: 20px var(--hFont);
+    font: 24px var(--hFont);
     font-weight: bold;
     margin-top: 2%;
     @include xxl {
@@ -453,9 +453,10 @@
         // width: 605;
     }
     @include xl{
-      width: 55%;
+      width: 70%;
       padding: 2%;
       // hFeight: 20%;
+      // font-weight: 20px;
     }
     @include lgg{
       width: 70%;
@@ -472,6 +473,7 @@
   // justify-content: none;
   // align-items: center;
   .fourth-content-wrapper-circle {
+    animation: hover 4s ease-in-out 0s infinite;
     width: 300px;
     height: 300px;
     background-color: #4a4a4a;
@@ -486,6 +488,7 @@
     z-index: -1;
     bottom: 10;
     p {
+      text-align: justify;
     }
     @include lgg{
       display: none;
@@ -494,7 +497,7 @@
       // top: 100;
       right: 13%;
       top: 0%;
-      z-index: -100;
+      z-index: 100;
       background-color: rgba(73, 19, 222, 0.3);
     }
     @include xll{
@@ -519,8 +522,8 @@
   }
   .fourth-content-lifestyle {
     display: grid;
-    grid-template-columns: 331px 236px 236px 331px;
-    grid-template-rows: 227px 227px;
+    grid-template-columns: 345px 345px 345px 345px;
+    grid-template-rows: 300px 300px;
     @include xl{
     grid-template-rows: 227px 227px 227px 227px;
     grid-template-columns: 331px 236px 236px;
@@ -535,14 +538,17 @@
     @include xsm{
       grid-template-columns: 170px 170px;
     }
+    overflow: hidden;
     // grid-template: ;
     grid-gap: 6px;
     .fourth-content-layer {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
+      
     }
     .fourth-content-layer:hover {
+      transition: background-color 0.5s;
       width: 100%;
       height: 100%;
       background-color: transparent;
@@ -552,6 +558,8 @@
       background-image: url("../../assets/LifeStyle/Summer\ Camp/image_1.png");
       background-size: cover;
       background-position: center;
+      transition: transform 3s;
+      overflow: hidden;
     }
     .fourth-content-item2 {
       grid-row-start: 1;
@@ -741,9 +749,31 @@
       }
       .lifestyle_biratnagar {
         color: #ed1c24;
+        font-weight: bolder;
+        font-size: 20px;
+        @include xl{
+          font-size: 18px;
+        }
+        @include lg{
+          font-size: 16px;
+        }
+        @include smm{
+          font-size: 12px;
+        }
       }
       .lifestyle_intr_cllg {
         color: #0057ff;
+        font-weight: bolder;
+        font-size: 20px;
+        @include xl{
+          font-size: 18px;
+        }
+        @include lg{
+          font-size: 16px;
+        }
+        @include smm{
+          font-size: 12px;
+        }
       }
     }
   }
@@ -751,7 +781,7 @@
 
 .sixth-content-events {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -771,6 +801,11 @@
     font-weight: 500;
   }
   .events-card-back-section {
+    animation-name: upDownAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
     @include lg{
       display: none;
     }
@@ -785,7 +820,9 @@
     left: 10%;
     width: 90.2%;
     display: flex;
+    bottom: 15%;
     justify-content: space-around;
+
     .events-card-back {
       height: 481px;
       width: 20%;
@@ -822,10 +859,12 @@
     }
 
     .events-card {
+
       border-radius: 100px 20px 100px 0;
       width: 27%;
       height: 481px;
       background-color: #457992;
+      transition: transform 0.5s;
       @include lg{
         min-width: 35%;
         height: 500px;
@@ -854,6 +893,7 @@
         }
       }
       p {
+        text-align: justify;
         font: 14px var(--pFont);
         padding-top: 10%;
         @include smm{
@@ -918,6 +958,9 @@
         }
       }
     }
+    .events-card:hover {
+      transform: scale(1.05);
+    }
   }
 }
 // .seventh-content-sports{
@@ -959,6 +1002,7 @@
   flex-direction: column;
   position: relative;
   .seventh-content-sports-back {
+    animation: upDownAnimation 4s ease-in-out 0s infinite;
     height: 500px;
     width: 383px;
     background-color: #20409a;
@@ -977,6 +1021,7 @@
     height: 93%;
     display: grid;
     // grid-gap: 0.92%;
+    position: relative;
 
     // border: 1px solid black;
     grid-template-columns: 14.266% 14.266% 14.266% 14.266% 14.266% 14.266% 14.266%;
@@ -988,13 +1033,76 @@
       grid-column-start: 3;
       grid-column-end: 8;
       z-index: -1;
-      background-image: url("../../assets/Images/sports.jpg");
+      background-image: url("./Big\ Sports.jpg");
       background-size: cover;
       // @include sm{
       //   z-index: 100;
       // }
     }
+    .ball_sports_shadow{
+      animation: shadow_hover 1.5s ease-in-out 0s infinite;
+      position: absolute;
+      width: 100px;
+      height:80px;
+      background: radial-gradient( #000000, #ffffff,);
+      // right: 5%;
+      left: 14.5%;
+      top: 14.9%;
+      // transform: scaleY(0.5);
+      border-radius: 50%;
+      z-index: -1;
+      @include lg{
+        left: 15.7%;
+      }
+      @include md{
+        left: 15%;
+      }
+      @include smm{
+        width: 80px;
+        height: 60px;
+      left: 18.5%;
+      top: 13%;
+      }
+      @include sm{
+        width: 60px;
+        height: 40px;
+        left: 5.5%;
+        top: 6%;
+      }
+    }
+    .ball_sports_hand{
+      animation: hand_hover 1.5s ease-in-out 0s infinite;
+      width: 120px;
+      height: 80px;
+      left: 12%;
+      top: -1%;
+      // background-color: #0057ff;
+      background-size: cover;
+      position: absolute;
+      background-image: url('./hand.png');
+      @include lg{
+      left: 14%;
+      }
+      @include xl{
+        top: -6%;
+        width: 92px;
+        height: 60px;
+      }
+      @include smm{
+        top:-2%;
+        left: 18%;
+        width: 60px;
+        height: 40px;
+      }
+      @include sm{
+        top: -5.5%;
+        left: 6%;
+        width: 50px;
+        height: 30px;
+      }
+    }
     .seventh-content-sports-heading {
+      z-index: 1000;
       background-color: white;
       color: #20409a;
       grid-area: 1/1/3/6;
@@ -1012,8 +1120,14 @@
         width: 100%;
         text-align: center;
         align-items: center;
+        gap: 10px;
         justify-content: center;
         font: 7.98vw var(--hFont);
+        font-weight: bold;
+        @include lg{
+        font: 7vw var(--hFont);
+        font-weight: bolder;
+        }
         @include smm{
         font: 5.98vw var(--hFont);
         }
@@ -1024,13 +1138,18 @@
           justify-content: start;
         }
         .ball_sports {
+    animation: ball_hover 1.5s ease-in-out 0s infinite;
           background-image: url("../../assets/LifeStyle/ball_foot.png");
           background-size: cover;
           width: 80px;
           height: 80px;
           margin-top: 9px;
+          // padding-top: 20px;
+          // padding-left: 30px;
+          // padding: 20px 0;
           background-color: #0057ff;
           border-radius: 50%;
+
           @include smm{
             width: 40px;
             height: 40px;
@@ -1040,6 +1159,7 @@
             height: 20px;
           }
         }
+        
       }
     }
     .seventh-content-sports-year {
@@ -1059,7 +1179,8 @@
       }
       p {
         padding-right: 4%;
-        font:  5vw var(--hFont);
+        font:  4.5vw var(--hFont);
+        font-weight: bold;
         text-align: end;
         display: flex;
         align-items: center;
@@ -1070,6 +1191,7 @@
           font-weight: bold;
         }
         .basket_sports {
+        // animation: ball_hover 5s ease-in-out 0s infinite;
           width: 50px;
           height: 50px;
           // background-color: #0057FF;
@@ -1115,7 +1237,8 @@
         justify-content: space-evenly;
         flex-direction: column;
         p {
-          font-size: 1vw;
+          text-align: justify;
+          font-size: 0.8vw;
           @include smm{
             font-size: 1.3vw;
           }
@@ -1155,11 +1278,16 @@
   .eight-content-sports-chess-back {
     width: 30%;
     height: 80%;
-    background-color: #0057ff;
+    // background-color: #20409A;
+      animation: hover 2s ease-in-out 0s infinite;
+    background-image: url('./chess.png');
     position: absolute;
-    right: 4%;
+    right: -5%;
     z-index: -100;
-    bottom: 1%;
+    // bottom: 1%;
+    top:1%;
+    background-size: cover;
+    rotate: 45deg;
   }
   .eight-content-sports-wrapper {
     display: flex;
@@ -1180,7 +1308,7 @@
       justify-content: space-evenly;
       align-items: center;
       h3 {
-        font: 1.5vw var(--hFont);
+        font: 3vw var(--hFont);
         color: white;
         font-weight: bold;
         @include smm{
@@ -1189,6 +1317,7 @@
       }
       h3,
       p {  
+        text-align: justify;
         width: 80%;
       }
       p{
@@ -1226,3 +1355,113 @@
 .top-container-first-wrapper{
   width: 200px;
 }
+
+
+@keyframes hover {
+  0%{
+      transform: translateY(0);
+  }
+  40%{
+      transform: translateY(-20px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+@keyframes shadow_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: scale(0.1,0.3);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+    transform: scale(0.7,0.3);
+
+  }
+  100%{
+    // transform: scaleX(0);
+    transform: scale(0.1,0.3);
+
+    // transform: rotate(10deg);
+  }
+}
+
+
+@keyframes hand_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: rotate(13deg);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+    transform: rotate(0deg);
+
+  }
+  100%{
+    transform: rotate(13deg);
+  }
+}
+
+@keyframes ball_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: translateY(-60px);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+     transform: translateY(0);
+     transform: scaleX(1.2);
+
+  }
+  100%{
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes wipe-enter {
+	// 0% {
+	// 	transform: scale(0, 0.4);
+	// }
+  40%{
+		transform: scale(0.5, 0.3);
+  }
+	50% {
+		transform: scale(1, 0.7);
+	}
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .second {
+    animation: wipe-enter 1s infinite;
+  }
+}
+@keyframes upDownAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
