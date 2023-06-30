@@ -6,7 +6,7 @@ const Admission = () => {
     return (
 
         <>
-        <NavBar/>
+        <NavBar pos='sticky'/>
         <SlideShow/>
             <div className="admission">
                 <div className="entry-requirement">

@@ -6,7 +6,8 @@ import MainContainer from "../AboutUs/MainContainer/MainContainer";
 const Landing = () => {
   return(
     <>
-        <NavBar/>
+        <NavBar pos='sticky'/>
+        <br /><br /><br /><br />
         <MainContainer/>
     </>
   )
