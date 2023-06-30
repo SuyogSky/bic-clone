@@ -123,8 +123,13 @@
                     flex-direction: column;
                     transition: all 0.5s ease;
                     &.active{
-                        top: 80px;
+                        top: 110px;
                         padding: 20px 0;
+                    }
+                }
+                @include sm{
+                    &.active{
+                        top: 80px;
                     }
                 }
                 li{
@@ -330,7 +335,6 @@
                 }
             }
         }
-
         
         // Bubbles Animation
         @include md{

@@ -18,6 +18,8 @@ import Admission2 from './components/BlogPage/admission';
 import Christmas from './components/BlogPage/christmas';
 import Darkness from './components/BlogPage/darkness';
 
+import AddBlog from './components/AdminPage/AddBlog/AddBlog';
+
 const App = () => {
   return(
     <>
@@ -37,6 +39,8 @@ const App = () => {
           <Route path='/blog' element={<Admission2/>}></Route>
           <Route path='/xmas' element={<Christmas/>}></Route>
           <Route path='/dark' element={<Darkness/>}></Route>
+
+          <Route path='/add-blog' element={<AddBlog/>}></Route>
         </Routes>
       </BrowserRouter>
       <Footer/>

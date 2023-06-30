@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import './Enquire.scss';
 import Captcha from '../../assets/Enquire/recaptcha-logo.png'
@@ -7,7 +7,41 @@ import { FaUserGraduate } from 'react-icons/fa';
 import { BiLinkAlt } from 'react-icons/bi';
 import EnquireImg from '../../assets/Enquire/enquire.png'
 
+import Axios from "axios";
+
 const Enquire = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [sector, setSector] = useState('');
+    const [referal, setReferal] = useState('');
+    // const [name, setName] = useState('');
+
+    const enquireNow = (e)=>{
+        e.preventDefault();
+        let name = firstName.trim() + ' ' + lastName.trim()
+        console.log(name)
+        Axios.post("http://192.168.52.193:5000/api/enquiry",{
+            name: name,
+            phone: phone,
+            email: email,
+            sector: sector,
+            referral: referal
+        }).then((response) =>{
+            console.log(response)
+            console.log(response.data)
+        })
+    }
+    // const enquireNow2 = (e) => {
+    //     e.preventDefault();
+    //     console.log('Name: ', firstName, ' ', lastName)
+    //     console.log('Phone: ', phone);
+    //     console.log('Email: ', email)
+    //     console.log('Sector: ', sector)
+    //     console.log('Referal: ', referal)
+    // }
+
     return (
         <>
             <NavBar pos='sticky'/>
@@ -18,35 +52,35 @@ const Enquire = () => {
 
                 <div className="enquire-container">
                     <h2>Ready to Join Tell us More..</h2>
-                    <form action="">
+                    <form action="" onSubmit={(e)=>enquireNow(e)}>
                         <label htmlFor="first-name">Name<span>*</span></label>
                         <div className="name">
-                            <input type="text" placeholder="First" id="first-name" />
-                            <input type="text" placeholder="Last" />
+                            <input type="text" placeholder="First" id="first-name" onChange={(e)=>setFirstName(e.target.value)} required minLength='3'/>
+                            <input type="text" placeholder="Last"  onChange={(e)=>setLastName(e.target.value)} required minLength='3'/>
                         </div>
 
                         <label htmlFor="phone">Phone Number<span>*</span></label>
                         <div className="phone">
                             <p>+977</p>
-                            <input type="number" id="phone" />
+                            <input type="text" id="phone"  onChange={(e)=>setPhone(e.target.value)} required pattern="[1-9]{1}[0-9]{9}"/>
                         </div>
 
                         <label htmlFor="email">Email Address<span>*</span></label>
                         <div className="email">
                             <p><IoMdMail/></p>
-                            <input type="email" id="email" />
+                            <input type="email" id="email"  onChange={(e)=>setEmail(e.target.value)} required minLength='10'/>
                         </div>
 
                         <label htmlFor="sector">Sector<span>*</span></label>
                         <div className="sector">
                             <p><FaUserGraduate/></p>
-                            <input type="text" id="sector" />
+                            <input type="text" id="sector"  onChange={(e)=>setSector(e.target.value)} required minLength='3'/>
                         </div>
 
                         <label htmlFor="referal">Referal<span>*</span></label>
                         <div className="referal">
                             <p><BiLinkAlt/></p>
-                            <input type="text" id="referal" />
+                            <input type="text" id="referal"  onChange={(e)=>setReferal(e.target.value)} required minLength='3'/>
                         </div>
 
                         <div className="captcha">

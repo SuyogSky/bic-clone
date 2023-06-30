@@ -55,6 +55,7 @@
                     padding: 7px 20px;
                     font-family: var(--pFont);
                     border: none;
+                    outline: none;
                 }
                 &.name{
                     gap: 20px;
@@ -62,6 +63,7 @@
                     input{
                         border: 1px solid rgba(0,0,0,0.5);
                         border-radius: 5px;
+                        outline: none;
                     }
                 }
                 &.captcha{

@@ -37,6 +37,7 @@
             font-size: 32px;
             margin: 0 0 20px 0;
             color: rgba(0,0,0,0.5);
+            text-align: center;
         }
         .u-line{
             display: flex;
@@ -166,7 +167,7 @@
                 background-color: #FF8A8A;
                 box-shadow: 0 0 10px rgba(0,0,0,0.5);
                 top: 0%;
-                margin-left: 100px;
+                right: -40px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -183,7 +184,7 @@
                     background-color: rgba(255, 138, 138, 0.8);
                     margin: 0;
                     top: 350px;
-                    margin-left: -70px;
+                    margin-right: 80px;
                 }
                 @include xsm{
                     display: none;

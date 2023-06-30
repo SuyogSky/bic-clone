@@ -12,8 +12,8 @@ const Visit = () => {
     return(
         <section className="visit-section">
             <div className="visit-heading">
-                <p>Our Courses</p>
-                <h2>Programmes</h2>
+                <p>Visit Us</p>
+                <h2>Our Infrastructures</h2>
                 <div className="u-line">
                     <span className="box"></span>
                     <span className="line"></span>
