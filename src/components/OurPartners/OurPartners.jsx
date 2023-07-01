@@ -10,6 +10,7 @@ import image6 from '../../assets/Images/corporate-partnerships.jpeg'
 import image7 from '../../assets/Images/black-logo1-removebg-preview.png'
 import image8 from '../../assets/Images/Sanima-Bank.png'
 import image9 from '../../assets/Images/cim.webp'
+import { MdLocationOn } from 'react-icons/fa'
 const Partners = () => {
   return (
     <>
@@ -32,7 +33,7 @@ const Partners = () => {
           <div className="Block1" ></div>
           <div className="Block2" ></div>
 
-          <div className="partner-content">
+          <div className="partner-content" onClick={()=>window.location.href='https://www.londonmet.ac.uk/'}>
             <img src={image2} alt="Image" />
 
             <h1>Our University</h1>
@@ -58,7 +59,7 @@ const Partners = () => {
           <div className="Block3" ></div>
           <div className="Block4" ></div>
 
-          <div className="partner-content2">
+          <div className="partner-content2"onClick={()=>window.location.href= '//inggroup.com.np/index.html'}>
             <img src={image3} alt="Image" />
 
             <h1>Innovate Nepal</h1>
@@ -106,7 +107,7 @@ const Partners = () => {
               <div className="C3">
                 <h4>Chamber of Industries Morang</h4>
                 <div className="image">
-                  <img src={image9} alt="" />
+                  <img className="lastimg" src={image9} alt="" />
                 </div>
               </div>
             </div>
