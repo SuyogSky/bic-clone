@@ -20,7 +20,7 @@
     column-gap: 50px;
 }
 .mainImage{
-    height: 90%;
+    height: 60vh;
     width: 100%;
     overflow: hidden;
     /* border-radius: 15px; */
@@ -36,58 +36,36 @@
     transition: 0.5s;
 }
 .secondImage{
+    /* width: 50%; */
+    /* height: 100%; */
     overflow: hidden;
     border-radius: 15px;
-}
-/* .secondColumn{
-    overflow: hidden;
-} */
-.secondImage img:hover{
-    /* overflow: hidden; */
-    transition: 1s;
-    transform: scale(1.1);
-}
-.secondImage:hover~.Text1{  
-    transition: 0.5s;
-    text-decoration: underline;
-}
-.thirdImage{
-    overflow: hidden;
-    border-radius: 15px;
-}
-.thirdImage:hover~.Text2{
-    text-decoration: underline;
-    transition: 0.5s;
-}
-.thirdImage img:hover{
-    transition: 0.5s;
-    transform: scale(1.1);
-}
-.Space {
-    width: 70%;
-    column-gap: 20px;
-    display: flex;
-}
-.secondColumn {
-    height: 30%;
-    width: 70%;
-}
-.thirdColumn {
-    height: 30%;
-    width: 70%;
-}
-.firstPhoto {
-    height: 100%;
-    width: 100%;
 }
 
-.Text1 {
-    font-size: 16px;
-    font-weight: bold;
+
+.secondColumn{
+    padding-top: 10px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
-.Text2{
-    font-size: 16px;
-    font-weight: bold; 
+.individuals{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.individuals h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+}
+
 
 
