@@ -1,10 +1,105 @@
 @import '../../../css-config/mixins.scss';
 
-.add-blog{
+.blogs-table {
+    width: calc(100% - 350px);
+    float: right;
+    margin-top: 88px;
+
+    .add-button {
+        float: right;
+        margin-right: 50px;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        gap: 10px;
+
+        svg {
+            color: rgb(32, 207, 32);
+            font-size: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        float: right;
+        margin-top: 20px;
+
+        tr {
+            th {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            th,
+            td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                padding: 10px 60px;
+                text-align: justify;
+            }
+
+            td {
+                svg {
+                    font-size: 20px;
+                    margin-right: 20px;
+                    cursor: pointer;
+
+                    &.edit {
+                        color: blue;
+                    }
+
+                    &.delete {
+                        color: red;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+                cursor: default;
+            }
+        }
+    }
+
+    .empty {
+        width: 100%;
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+        font-family: var(--pFont);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 40vh;
+        svg{
+            font-size: 60px;
+        }
+    }
+}
+
+
+.edit-blog{
     width: calc(100% - 350px);
     padding: 40px;
     padding-top: 60px;
     float: right;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    display: none;
+    &.active{
+        display: inline-block;
+    }
     form{
         display: flex;
         .writer-info, .blog-contents{
@@ -23,7 +118,7 @@
             width: 40%;
             h2{
                 font-family: var(--hFont);
-                font-size: 24px;
+                font-size: 18px;
                 color: rgba(0,0,0,0.6);
                 margin-bottom: 30px;
             }
@@ -78,19 +173,25 @@
                 font-size: 16px;
                 cursor: pointer;
             }
-            input[type='text']{
-                background-color: white;
-                width: 300px;
-                height: 40px;
-                border-radius: 50px;
+            .writer-name{
                 margin-top: 20px;
-                border: none;
-                outline: none;
-                font-size: 16px;
-                padding: 0 20px;
-                display: flex;
-                align-items: center;
+                label{
+                    margin-left: 10px;
+                }
+                input[type='text']{
+                    background-color: white;
+                    width: 300px;
+                    height: 40px;
+                    border-radius: 50px;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    padding: 0 20px;
+                    display: flex;
+                    align-items: center;
+                }
             }
+            
         }
         .blog-contents{
             label{

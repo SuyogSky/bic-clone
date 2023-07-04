@@ -5,54 +5,54 @@ import NavBar from '../NavBar/NavBar';
 // function underline(){
 
 // }
+const Homepageofblogs = () => {
+
+    var array = [1, 2, 3, 4, 5, 6, 9]
+
+    const navigate = useNavigate();
+
+
+    return (<>
+        <div className="individuals">
+            <div className="secondImage" >
+                <img src={require("../../assets/Img/The Power of Darkness (1).png")} alt="hi" onClick={() => navigate('/dark')} /><br />
+            </div>
+            <h3 className="Text1">The Power of Darkness: Lesson Learned - Rohan Roka Chettri</h3><br />
+
+        </div>
+    </>)
+
+
+
+}
 
 const NewBlog = () => {
 
     const navigate = useNavigate();
+    const num = [3, 8, 11, 7]
     return (
         <>
-            <NavBar/>
+            <NavBar />
             <div class="Christmas">
                 <div class="firstColumn">
                     {/* <h2 class="Text">Be like a sunflower</h2> */}
                     <div className="mainImage">
-                        <img onClick={() => navigate('/blog')} src={require("../../assets/Img/sunflower.jpg")} alt="hi" class="firstPhoto" /> 
+                        <img onClick={() => navigate('/blog')} src={require("../../assets/Img/sunflower.jpg")} alt="hi" class="firstPhoto" />
                     </div>
                 </div>
-                <div class="Space">
-                    <div class="secondColumn">
-                        <div className="secondImage" >
-                        <img src={require("../../assets/Img/The Power of Darkness (1).png")} alt="hi" onClick={() => navigate('/dark')}  /><br />
-                        </div>
-                        <h3 class="Text1">The Power of Darkness: Lesson Learned - Rohan Roka Chettri</h3><br />
-                        <div className="thirdImage">
-                        <img src={require("../../assets/Img/Rashmi Atal.png")} alt="hi" onClick={() => navigate('/blog')}  />
-                        </div>
-                        <h3 class="Text2">My first period, My new friend - Rashmi Atal</h3>
-      
-                    </div>
-                    <br />
+                <div className="secondColumn">
 
-                    <div class="thirdColumn">
-                        <div className="secondImage">
-                        <img src={require("../../assets/Img/aa.jpg")} alt="hi" onClick={() => navigate('/xmas')}  />
+                    {num.map((n) => <Homepageofblogs />)}
 
-                        </div>
-                        <h3 class="Text1"> The overlooked benefits of real Christmas trees -Dr. Rishikesh Wagle</h3><br />
-                        <div className="thirdImage">
-                            <img src={require("../../assets/Img/Thumbnail.png")} alt="hi" onClick={() => navigate('/blog')}  />
-                        </div>
-                        <h3 class="Text2">Every man is a BATMAN - Raghav</h3>
-                    </div>
 
                 </div>
 
             </div>
-        
+
         </>
-        
+
     )
-    
+
 }
 
 export default NewBlog;

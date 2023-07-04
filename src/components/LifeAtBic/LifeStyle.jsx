@@ -22,6 +22,8 @@ import slide_image_2 from "../LifeAtBic/imageSlider/images/slide-2.png";
 import slide_image_3 from "../LifeAtBic/imageSlider/images/slide-3.png";
 import gsap from "gsap";
 import { useState } from "react";
+import Slideshow from "../Admission/Slideshow/Slideshow";
+import Footer from "../Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 const LifeStyle = () => {
@@ -217,26 +219,7 @@ const prevSlide = () => {
       <NavBar />
       <div className="top-container">
         <div className="top-first-partition">
-          <div className="text">
-            <h1>Biratnagar</h1>
-            <h1>International</h1>
-            <h1>College</h1>
-          </div>
-          <div className="slider">
-            <div className="slides">
-              <div className="slide" style={{'margin-left':`${slide}%`}}>
-                <img src={slide_image_1} className="slide_lifestyle_img" alt="slide_image"/>
-              </div>
-
-              <div className="slide">
-                <img src={slide_image_2} className="slide_lifestyle_img" alt="slide_image"/>
-              </div>
-
-              <div className="slide">
-                <img src={slide_image_3} className="slide_lifestyle_img" alt="slide_image"/>
-              </div>
-            </div>
-          </div>
+          <Slideshow/>
           {/* <div className="top-container-first-wrapper">
             <Swiper
               effect={"coverflow"}
@@ -328,32 +311,6 @@ const prevSlide = () => {
               {/* <img src={volume_img} className="volume" alt="" /> */}
               <div className="slider-controller">
                 <div className="swiper-pagination"></div>
-                <div className="before-lifestyle">
-                  <button
-                    onClick={()=>prevSlide()}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: "transparent",
-                      borderRadius: 50,
-                      borderColor: "transparent",
-                    }}
-                    class="button-prev-lifestyle"
-                  ></button>
-                </div>
-                <div className="after-lifestyle">
-                  <button
-                    onClick={()=>nextSlide()}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: "transparent",
-                      borderRadius: 50,
-                      borderColor: "transparent",
-                    }}
-                    class="button-after-lifestyle"
-                  ></button>
-                </div>
               </div>
             </div>
             <span></span>
@@ -535,7 +492,7 @@ const prevSlide = () => {
           <div className="eight-content-sports-chess-back"></div>
         </div>
       </div>
-
+      <Footer/>
     </>
   );
 };

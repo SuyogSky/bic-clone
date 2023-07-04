@@ -6,6 +6,7 @@ import { useRef, useEffect, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { useState } from "react";
+import Footer from "../../Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 const Programmes = () => {
@@ -118,6 +119,7 @@ const Programmes = () => {
             </div>
 
             <Group/>
+            <Footer/>
         </>
     )
 }

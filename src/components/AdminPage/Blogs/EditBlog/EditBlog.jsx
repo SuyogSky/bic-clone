@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './AddBlog.scss'
+import './EditBlog.scss'
 import NavBar from "../../NavBar/NavBar";
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 import { ImCross } from 'react-icons/im'
@@ -10,7 +10,7 @@ import Axios from "axios";
 import AdminNavigation from "../AdminNavigation/AdminNavigation";
 import { useNavigate } from "react-router-dom";
 import ip from "../../../ip-config/ip";
-const AddBlog = () => {
+const EditBlog = ({ blog_id }) => {
 
     const navigate = useNavigate()
     const [writerImage, setWriterImage] = useState(null)
@@ -142,7 +142,7 @@ const AddBlog = () => {
                         </div>
 
                         <div className="cross-btn" onClick={()=>navigate('/admin-blogs')}>
-                            <button><ImCross/>Cancle</button>
+                            <button type="submit"><ImCross/>Cancle</button>
                         </div>
                     </div>
                 </form>
@@ -151,4 +151,4 @@ const AddBlog = () => {
     )
 }
 
-export default AddBlog
+export default EditBlog;

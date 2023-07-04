@@ -7,6 +7,7 @@ import Group from '../Group/Group'
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
+import Footer from "../../Footer/Footer";
 const BIHM = () => {
     const imageRef = useRef(null);
     const anotherRef = useRef(null);
@@ -136,6 +137,7 @@ const BIHM = () => {
             <Module/>
             <br /><br />
             <Group/>
+            <Footer/>
         </>
     );
 };

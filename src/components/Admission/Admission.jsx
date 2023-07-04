@@ -2,6 +2,7 @@ import React from "react";
 import "./Admission.scss";
 import NavBar from "../NavBar/NavBar";
 import SlideShow from './Slideshow/Slideshow'
+import Footer from "../Footer/Footer";
 const Admission = () => {
     return (
 
@@ -60,6 +61,7 @@ const Admission = () => {
                 </div>
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <Footer/>
         </>
 
     );

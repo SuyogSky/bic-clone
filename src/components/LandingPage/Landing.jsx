@@ -6,6 +6,7 @@ import Events from "./Events/Events";
 import Visit from "./Visit/Visit";
 import Testimonial from "./Testimonial/Testimonial";
 import Next from "./Next/Next";
+import Footer from "../Footer/Footer";
 
 const Landing = () => {
   return(
@@ -17,6 +18,7 @@ const Landing = () => {
       <Visit/>
       <Testimonial/>
       <Next/>
+      <Footer/>
     </>
   )
 }

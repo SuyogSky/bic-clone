@@ -151,7 +151,6 @@
 
   @media screen and (max-width: 768px) {
     height: auto;
-    padding: 20px;
   }
 }
 
@@ -184,43 +183,55 @@
   }
 }
 
-// .image-text {
-//   font-size: 50px;
-//   font-family: var(--hFont);
-//   font-weight: 700;
+.image-text {
+  font-size: 50px;
+  font-family: var(--hFont);
+  font-weight: 700;
 
-//   @media screen and (max-width: 768px) {
-//     position: relative;
-//     top: -125px;
-//     font-size: 20px;
-//   }
-// }
+  @media screen and (max-width: 768px) {
+    position: relative;
+    top: -125px;
+    font-size: 20px;
+  }
+}
 
-// .apply-buttons {
-//   position: relative;
-//   top:490px;
-//   display: inline-block;
-//   padding: 10px 20px;
-//   background-color: red;
-//   color: white;
-//   border: none;
-//   border-radius: 5px;
-//   font-size: 25px;
-//   cursor: pointer;
-//   transition: background-color 0.9s ease;
-
-
-//   &:hover {
-//     background-color: #fff;
-//     color: #000;
-//   }
+.apply-button {
+  position: relative;
+  top:490px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.9s ease;
 
 
-//   @media screen and (max-width: 954px) {
-//     top: -3px;
-//     height: 30px;
-//     width: 100px;
-//     font-size: 12px;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 
-//   }
-// }
+
+  @media screen and (max-width: 954px) {
+    top: -3px;
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+
+  }
+}
+.apply-buttons{
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: rgb(162, 58, 58);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  
+}

@@ -8,6 +8,8 @@ import { BiLinkAlt } from 'react-icons/bi';
 import EnquireImg from '../../assets/Enquire/enquire.png'
 
 import Axios from "axios";
+import ip from "../../ip-config/ip";
+import Footer from "../Footer/Footer";
 
 const Enquire = () => {
     const [firstName, setFirstName] = useState('');
@@ -22,7 +24,7 @@ const Enquire = () => {
         e.preventDefault();
         let name = firstName.trim() + ' ' + lastName.trim()
         console.log(name)
-        Axios.post("http://192.168.52.193:5000/api/enquiry",{
+        Axios.post(`http://${ip}:5000/api/enquiry`,{
             name: name,
             phone: phone,
             email: email,
@@ -83,16 +85,12 @@ const Enquire = () => {
                             <input type="text" id="referal"  onChange={(e)=>setReferal(e.target.value)} required minLength='3'/>
                         </div>
 
-                        <div className="captcha">
-                            <input type="checkbox" />
-                            <p>I'm not a robot</p>
-                            <img src={Captcha} alt="" />
-                        </div>
-
+                        <br />
                         <input type="submit" value='Submit'/>
                     </form>
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }

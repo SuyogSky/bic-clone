@@ -10,6 +10,7 @@ import image6 from '../../assets/Images/corporate-partnerships.jpeg'
 import image7 from '../../assets/Images/black-logo1-removebg-preview.png'
 import image8 from '../../assets/Images/Sanima-Bank.png'
 import image9 from '../../assets/Images/cim.webp'
+import Footer from "../Footer/Footer";
 const Partners = () => {
   return (
     <>
@@ -115,7 +116,7 @@ const Partners = () => {
       </div>
 
 
-
+    <Footer/>
 
 
     </>

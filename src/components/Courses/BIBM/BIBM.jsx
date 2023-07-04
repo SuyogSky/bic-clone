@@ -5,6 +5,7 @@ import Group from '../Group/Group';
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
+import Footer from '../../Footer/Footer';
 
 const BIBM = () => {
 
@@ -14,89 +15,89 @@ const BIBM = () => {
     const anotherRef3 = useRef(null);
     const anotherRef4 = useRef(null);
 
-    useLayoutEffect(()=>{
-        const el1 = imageRef.current;
-        const el2 = anotherRef.current;
-        const el3 = anotherRef2.current;
-        const el4 = anotherRef3.current;
-        const el5 = anotherRef4.current;
-        const animation1 = gsap.fromTo(
-            el1,
-            { opacity: 0, y: 100 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "linear",
-            }
-          );
+    // useLayoutEffect(()=>{
+    //     const el1 = imageRef.current;
+    //     const el2 = anotherRef.current;
+    //     const el3 = anotherRef2.current;
+    //     const el4 = anotherRef3.current;
+    //     const el5 = anotherRef4.current;
+    //     const animation1 = gsap.fromTo(
+    //         el1,
+    //         { opacity: 0, y: 100 },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           duration: 1,
+    //           ease: "linear",
+    //         }
+    //       );
       
-          const animation2 = gsap.fromTo(
-            el2,
-            { opacity: 0, y: 100 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "linear",
-            }
-          );
+    //       const animation2 = gsap.fromTo(
+    //         el2,
+    //         { opacity: 0, y: 100 },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           duration: 1,
+    //           ease: "linear",
+    //         }
+    //       );
       
-          const animation3 = gsap.fromTo(
-            el3,
-            { opacity: 0, y: 100 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power2.inOut",
-            }
-          );
+    //       const animation3 = gsap.fromTo(
+    //         el3,
+    //         { opacity: 0, y: 100 },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           duration: 1,
+    //           ease: "power2.inOut",
+    //         }
+    //       );
       
-          const animation4 = gsap.fromTo(
-            el4,
-            { opacity: 0, y: 100 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power2.inOut",
-            }
-          );
+    //       const animation4 = gsap.fromTo(
+    //         el4,
+    //         { opacity: 0, y: 100 },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           duration: 1,
+    //           ease: "power2.inOut",
+    //         }
+    //       );
 
-          const animation5 = gsap.fromTo(
-            el5,
-            { opacity: 0, y: 100 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power2.inOut",
-            }
-          );
-          ScrollTrigger.create({
-            trigger: el1,
-            animation: animation1,
-          });
+    //       const animation5 = gsap.fromTo(
+    //         el5,
+    //         { opacity: 0, y: 100 },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           duration: 1,
+    //           ease: "power2.inOut",
+    //         }
+    //       );
+    //       ScrollTrigger.create({
+    //         trigger: el1,
+    //         animation: animation1,
+    //       });
       
-          ScrollTrigger.create({
-            trigger: el2,
-            animation: animation2,
-          });
+    //       ScrollTrigger.create({
+    //         trigger: el2,
+    //         animation: animation2,
+    //       });
       
-          ScrollTrigger.create({
-            trigger: el3,
-            animation: animation3,
-          });
-          ScrollTrigger.create({
-            trigger: el4,
-            animation: animation4,
-          });
-          ScrollTrigger.create({
-            trigger: el5,
-            animation: animation5,
-          });
-    },[]);
+    //       ScrollTrigger.create({
+    //         trigger: el3,
+    //         animation: animation3,
+    //       });
+    //       ScrollTrigger.create({
+    //         trigger: el4,
+    //         animation: animation4,
+    //       });
+    //       ScrollTrigger.create({
+    //         trigger: el5,
+    //         animation: animation5,
+    //       });
+    // },[]);
     const [activeYear, setActiveYear] = useState('Year 1');
 
     const handleButtonClick = (year) => {
@@ -114,7 +115,7 @@ const BIBM = () => {
                 <p>BA (Hons) INTERNATIONAL HOSPITALITY MANAGEMENT</p>
             </div>
 
-            <div className="about_BIBM" ref={anotherRef}>
+            <div className="about_BIBM" >
                 <div className="contains_BIBM">
                     <div className="about_Images">
                         <img src={require("../../../assets/BIBM/Digital Business Management Intro.png")} alt="Image" className="BIBM_Image" />
@@ -130,14 +131,14 @@ const BIBM = () => {
                 </div>
             </div>
 
-            <div className="BIBM_Module" ref={anotherRef2}>
+            <div className="BIBM_Module" >
                 <h1> Module & Contents </h1>
                 <p>Acquire a thorough comprehension of programming languages, information systems,
                     software and hardware technologies, and various other related topics.</p>
             </div>
 
 
-            <div className="module_Slider" ref={anotherRef3}>
+            <div className="module_Slider" >
                 <button
                     className={`sliderButton ${activeYear === 'Year 1' ? 'active' : ''}`}
                     onClick={() => handleButtonClick('Year 1')}
@@ -165,7 +166,7 @@ const BIBM = () => {
             </div>
 
 
-            <div className="bibm-content" ref={anotherRef4}>
+            <div className="bibm-content" >
                 {activeYear === 'Year 1' &&
                     <>
                         <div className="DIV">
@@ -392,6 +393,7 @@ const BIBM = () => {
             <br />
 
             <Group/>
+            <Footer/>
         </> 
     );
 };
