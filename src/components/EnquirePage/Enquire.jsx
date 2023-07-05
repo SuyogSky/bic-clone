@@ -31,8 +31,9 @@ const Enquire = () => {
             sector: sector,
             referral: referal
         }).then((response) =>{
-            console.log(response)
-            console.log(response.data)
+            if(response.data.success == 1){
+                alert('Details Submitted.')
+            }
         })
     }
     // const enquireNow2 = (e) => {

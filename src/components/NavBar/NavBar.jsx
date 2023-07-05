@@ -53,6 +53,28 @@ const NavBar = ({pos}) => {
     }
   }
 
+  // courses hover effect
+  const [drop2nd, setDrop2nd] = useState(false);
+  const [drop22nd, setDrop22nd] = useState(false);
+  const mouseEnter2nd = () => {
+    setDrop2nd(true)
+  }
+
+  const mouseLeave2nd = () => {
+    setDrop2nd(false)
+  }
+
+  const clicked2nd = () => {
+    if(drop22nd){
+      setDrop22nd(false)
+    }
+    else{
+      setDrop22nd(true)
+    }
+  }
+
+
+
   return(
     <>
         <div className="top">
@@ -74,10 +96,17 @@ const NavBar = ({pos}) => {
                     </ul>
                   </li>
                   <li onClick={()=>navigate('/partners')}>Our Partners</li>
-                      <li onClick={()=>navigate('/admission')}>Admission</li>
+                  <li onClick={()=>navigate('/admission')}>Admission</li>
                   <li onClick={()=>navigate('/life')}>Life At BIC</li>
                   <li onClick={()=>navigate('/blogs')}>Blogs</li>
-                  <li onClick={()=>navigate('/enquire')}>Enquire</li>
+
+                  <li onClick={()=>clicked2nd()} onMouseEnter={()=>mouseEnter2nd()} onMouseLeave={()=>mouseLeave2nd()} className="course">
+                    Enquire
+                    <ul className={`courses ${drop2nd?'active':''} ${clicked2nd?'clicked':''}`}>
+                      <li onClick={()=>navigate('/enquire')}>Register</li>
+                      <li onClick={()=>navigate('/contact')}>Contact</li>
+                    </ul>
+                  </li>
               </ul>
 
               <div className={`menu-btn ${active?'active': ''}`} onClick={()=>menuClicked()}>
