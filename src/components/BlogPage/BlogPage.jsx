@@ -5,8 +5,11 @@ import Axios from "axios";
 import { FaAngleDown } from 'react-icons/fa'
 import ip from "../../ip-config/ip";
 import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const BlogPage = () => {
+    const navigate = useNavigate();
+
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
         const fetchBlogs = async () =>{
@@ -21,8 +24,17 @@ const BlogPage = () => {
     const seeMore = () => {
         dropped?setDropped(false):setDropped(true)
     }
+    const BlogPath = (id, year) => {
+        var path = `${year}/${id}`
+        console.log("This is path");
+        console.log(path);
+        return path;
 
+
+    }
     return(
+
+
         <>
             <NavBar/>
             <section className="blog-page">
@@ -30,8 +42,9 @@ const BlogPage = () => {
                     {blogs
                         ?
                             blogs.slice(0,1).map((blog)=>{
+                                console.log(blog);
                                 return(
-                                    <div className="blog mainBlog">
+                                    <div className="blog mainBlog" onClick={() => navigate(`${BlogPath(blog.post_id, blog.date)}`)} >
                                         <div className="img">
                                             <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
                                         </div>
@@ -47,13 +60,15 @@ const BlogPage = () => {
                     <div className="second-blog-container">
                         {blogs
                             ?
-                                blogs.slice(1,5).map((blog)=>{
+                            blogs.slice(1, 5).map((blog) => {
                                     return(
-                                        <div className="second-blog">
+
+                                        <div className="second-blog" onClick={() => navigate(`${BlogPath(blog.post_id, blog.date)}`)}>
+
                                             <div className="img">
                                                 <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
                                             </div>
-                                            <h4>{blog.title} - {blog.writer_name}</h4>
+                                            <h4>{blog.id} - {blog.writer_name}</h4>
                                         </div>
                                     )
                                 })
