@@ -100,7 +100,7 @@ const BIHM = () => {
     },[]);
     return (
         <>
-        <NavBar/>
+        <NavBar courses='course-opt' bihm='bihm-opt'/>
             {/* Photo and Heading */}
             <div className="BIHM_Container" ref={imageRef}>
                 <div className="BIHM_Photo">

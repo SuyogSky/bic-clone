@@ -4,26 +4,47 @@
     width: calc(100% - 350px);
     float: right;
     margin-top: 88px;
-
-    .add-button {
+    .buttons{
         float: right;
-        margin-right: 50px;
-        background-color: rgba(0, 0, 0, 0.7);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 50px;
-        gap: 10px;
-
-        svg {
-            color: rgb(32, 207, 32);
-            font-size: 20px;
+        .add-button {
+            margin-right: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            gap: 10px;
+    
+            svg {
+                color: rgb(32, 207, 32);
+                font-size: 20px;
+            }
+    
+            &:hover {
+                cursor: pointer;
+            }
         }
-
-        &:hover {
-            cursor: pointer;
+        .clear-button{
+            float: right;
+            margin-right: 50px;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            gap: 10px;
+            svg{
+                color: rgb(255, 0, 0);
+                font-size: 20px;
+            }
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 

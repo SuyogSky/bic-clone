@@ -47,7 +47,7 @@ const Enquire = () => {
 
     return (
         <>
-            <NavBar pos='sticky'/>
+            <NavBar pos='sticky' enquire='enquire-opt' register='register-opt'/>
             <section className="enquire">
                 <div className="image">
                     <img src={EnquireImg} alt="" />

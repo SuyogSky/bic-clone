@@ -6,8 +6,12 @@ import { FaAngleDown } from 'react-icons/fa'
 import ip from "../../ip-config/ip";
 import Footer from "../Footer/Footer";
 import SingleBlog from "./SingleBlogPage/SingleBlog";
+import { useNavigate } from "react-router-dom";
+
+
 
 const BlogPage = () => {
+    const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
         const fetchBlogs = async () =>{
@@ -23,19 +27,16 @@ const BlogPage = () => {
         dropped?setDropped(false):setDropped(true)
     }
 
-
-    // for SingleBlog
-    const [blogId, setBlogId] = useState()
     return(
         <>
-            <NavBar/>
+            <NavBar blogs='blogs-opt'/>
             <section className="blog-page">
                 <div className="display-blogs">
                     {blogs
                         ?
                             blogs.slice(0,1).map((blog)=>{
                                 return(
-                                    <div className="blog mainBlog"  onClick={()=>setBlogId(blog.post_id)}>
+                                    <div className="blog mainBlog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                         <div className="img">
                                             <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
                                         </div>
@@ -53,7 +54,7 @@ const BlogPage = () => {
                             ?
                                 blogs.slice(1,5).map((blog)=>{
                                     return(
-                                        <div className="second-blog" onClick={()=>setBlogId(blog.post_id)}>
+                                        <div className="second-blog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                             <div className="img">
                                                 <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
                                             </div>
@@ -98,7 +99,7 @@ const BlogPage = () => {
                                 ?
                                     blogs.slice(5).map((blog)=>{
                                         return(
-                                            <div className="other-blog" onClick={()=>setBlogId(blog.post_id)}>
+                                            <div className="other-blog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                                 <div className="img">
                                                     <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
                                                 </div>
@@ -115,7 +116,6 @@ const BlogPage = () => {
                 }
             </section>
             <Footer/>
-            <SingleBlog blog_id={blogId} />
         </>
     )
 }

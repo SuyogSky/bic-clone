@@ -27,14 +27,14 @@ const redirecto = () => {
 }
 
 const Footer = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <footer>
             <div className="footer-top">
                 <img src={Logo} alt="" />
                 <div className="buttons">
-                    <button className="btn1">Enquire Now</button>
-                    <button className="btn2">Contact Us</button>
+                    <button className="btn1" onClick={()=>navigate('/enquire')}>Enquire Now</button>
+                    <button className="btn2" onClick={()=>navigate('/contact')}>Contact Us</button>
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                     <span><IoMdMail/><p>info@bicnepal.edu.np</p></span>
                 </div>
                 <ul className="pages">
-                    <li>Home</li>
+                    <li onClick={()=>navigate('/')}>Home</li>
                     <li>Scholarship Programmes</li>
                     <li>Events</li>
                 </ul>

@@ -55,6 +55,26 @@ const Banner = () => {
     }
   }
 
+  // enquire hover effect
+  const [drop2nd, setDrop2nd] = useState(false);
+  const [drop22nd, setDrop22nd] = useState(false);
+  const mouseEnter2nd = () => {
+    setDrop2nd(true)
+  }
+
+  const mouseLeave2nd = () => {
+    setDrop2nd(false)
+  }
+
+  const clicked2nd = () => {
+    if(drop22nd){
+      setDrop22nd(false)
+    }
+    else{
+      setDrop22nd(true)
+    }
+  }
+
   return(
     <>
       <section className="banner">
@@ -66,7 +86,7 @@ const Banner = () => {
           <nav className={scrolled?'sticky':''}>
               <img src={Logo} alt="" className="logo"/>
               <ul className={`${active? 'active':''}`}>
-                  <li onClick={()=>navigate('/')}>Home</li>
+                  <li onClick={()=>navigate('/')} className="home-opt">Home</li>
                   <li onClick={()=>navigate('/about')}>About Us</li>
                   <li onClick={()=>clicked()} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
                     Courses
@@ -80,7 +100,13 @@ const Banner = () => {
                       <li onClick={()=>navigate('/admission')}>Admission</li>
                   <li onClick={()=>navigate('/life')}>Life At BIC</li>
                   <li onClick={()=>navigate('/blogs')}>Blogs</li>
-                  <li onClick={()=>navigate('/enquire')}>Enquire</li>
+                  <li onClick={()=>clicked2nd()} onMouseEnter={()=>mouseEnter2nd()} onMouseLeave={()=>mouseLeave2nd()} className="course">
+                    Enquire
+                    <ul className={`courses ${drop2nd?'active':''} ${clicked2nd?'clicked':''}`}>
+                      <li onClick={()=>navigate('/enquire')}>Register</li>
+                      <li onClick={()=>navigate('/contact')}>Contact</li>
+                    </ul>
+                  </li>
               </ul>
 
               <div className={`menu-btn ${active?'active': ''}`} onClick={()=>menuClicked()}>

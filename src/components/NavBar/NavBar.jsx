@@ -5,7 +5,7 @@ import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
 import { MdLocationOn } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({pos}) => {
+const NavBar = ({pos, home, about, courses, partners, admission, life, blogs, enquire, programs, bibm, bihm, register, contact}) => {
 
   const navigate = useNavigate();
 
@@ -53,7 +53,7 @@ const NavBar = ({pos}) => {
     }
   }
 
-  // courses hover effect
+  // enquire hover effect
   const [drop2nd, setDrop2nd] = useState(false);
   const [drop22nd, setDrop22nd] = useState(false);
   const mouseEnter2nd = () => {
@@ -86,25 +86,25 @@ const NavBar = ({pos}) => {
               <img src={Logo} alt="" className="logo"/>
               <ul className={`${active? 'active':''}`}>
                   <li onClick={()=>navigate('/')}>Home</li>
-                  <li onClick={()=>navigate('/about')}>About Us</li>
-                  <li onClick={()=>clicked()} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className="course">
+                  <li onClick={()=>navigate('/about')} className={about}>About Us</li>
+                  <li onClick={()=>clicked()} onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()} className={`course ${courses}`}>
                     Courses
                     <ul className={`courses ${drop?'active':''} ${clicked?'clicked':''}`}>
-                      <li onClick={()=>navigate('/programs')}>Programs</li>
-                      <li onClick={()=>navigate('/bibm')}>BIBM</li>
-                      <li onClick={()=>navigate('/bihm')}>BIHM</li>
+                      <li onClick={()=>navigate('/programs')} className={programs}>Programs</li>
+                      <li onClick={()=>navigate('/bibm')} className={bibm}>BIBM</li>
+                      <li onClick={()=>navigate('/bihm')} className={bihm}>BIHM</li>
                     </ul>
                   </li>
-                  <li onClick={()=>navigate('/partners')}>Our Partners</li>
-                  <li onClick={()=>navigate('/admission')}>Admission</li>
-                  <li onClick={()=>navigate('/life')}>Life At BIC</li>
-                  <li onClick={()=>navigate('/blogs')}>Blogs</li>
+                  <li onClick={()=>navigate('/partners')} className={partners}>Our Partners</li>
+                  <li onClick={()=>navigate('/admission')} className={admission}>Admission</li>
+                  <li onClick={()=>navigate('/life')} className={life}>Life At BIC</li>
+                  <li onClick={()=>navigate('/blogs')} className={blogs}>Blogs</li>
 
-                  <li onClick={()=>clicked2nd()} onMouseEnter={()=>mouseEnter2nd()} onMouseLeave={()=>mouseLeave2nd()} className="course">
+                  <li onClick={()=>clicked2nd()} onMouseEnter={()=>mouseEnter2nd()} onMouseLeave={()=>mouseLeave2nd()} className={`course ${enquire}`}>
                     Enquire
                     <ul className={`courses ${drop2nd?'active':''} ${clicked2nd?'clicked':''}`}>
-                      <li onClick={()=>navigate('/enquire')}>Register</li>
-                      <li onClick={()=>navigate('/contact')}>Contact</li>
+                      <li onClick={()=>navigate('/enquire')} className={register}>Register</li>
+                      <li onClick={()=>navigate('/contact')} className={contact}>Contact</li>
                     </ul>
                   </li>
               </ul>

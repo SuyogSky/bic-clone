@@ -38,7 +38,7 @@ const Contact = () => {
     :
     (
         <>
-            <NavBar/>
+            <NavBar enquire='enquire-opt' contact='contact-opt'/>
             <section className="contact-page">
                 <div className="contact-container">
                     <form action="" onSubmit={(e)=>contactNow(e)}>

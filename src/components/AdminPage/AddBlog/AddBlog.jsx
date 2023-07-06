@@ -43,6 +43,7 @@ const AddBlog = () => {
 
     const uploadBlog = async (event) => {
         event.preventDefault();
+        console.log(blogContent)
         try {
             const formData = new FormData();
             formData.append('title', blogHeading);

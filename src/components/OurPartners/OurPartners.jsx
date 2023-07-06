@@ -14,7 +14,7 @@ import Footer from "../Footer/Footer";
 const Partners = () => {
   return (
     <>
-      <NavBar />
+      <NavBar partners='partners-opt'/>
 
       <div className="SectionA" >
 

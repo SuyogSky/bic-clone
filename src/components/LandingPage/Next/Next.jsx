@@ -11,7 +11,7 @@ const Next = () => {
                 </div>
 
                 <div className="next-content">
-                    <button>Request Information</button>
+                    <button onClick={()=>navigate('/contact')}>Request Information</button>
                     <button>Virtual Visit</button>
                     <button onClick={()=>navigate('/enquire')}>Apply Now</button>
                 </div>

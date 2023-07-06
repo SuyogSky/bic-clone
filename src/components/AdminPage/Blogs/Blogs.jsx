@@ -103,12 +103,33 @@ const Blogs = () => {
             // Handle errors
         }
     }
+
+    const clearAll = () => {
+        // eslint-disable-next-line no-restricted-globals
+        const shouldClear = confirm('Do You Want to Delete All Blogs?');
+
+        if(shouldClear){
+            Axios.delete(`http://${ip}:5000/api/admin/postall`, {
+                headers: {
+                    Authorization: `Bearer ${win.getItem('token')}`
+                },
+            }).then((response) => {
+                console.log(response.data)
+                if(response.data.success == 0){
+                    window.location.href = '/contacts'
+                }
+            })
+        }
+    }
     return msg == null ?
         (
             <>
                 <AdminNavigation />
                 <div className="blogs-table">
-                    <div className="add-button" onClick={() => navigate('/add-blog')}><BiPlusMedical /><p>Add Blog</p></div>
+                    <div className="buttons">
+                        <div className="add-button" onClick={() => navigate('/add-blog')}><BiPlusMedical /><p>Add Blog</p></div>
+                        <div className="clear-button" onClick={() => clearAll()}><RiDeleteBinLine /><p>Clear All</p></div>
+                    </div>
                     <table>
                         <thead>
                             <tr>

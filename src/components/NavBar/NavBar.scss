@@ -124,7 +124,7 @@
                 cursor: pointer;
                 color: black;
                 transition: all 0.5s ease;
-                &.active{
+                &.home-opt,&.about-opt,&.course-opt,&.partners-opt,&.admission-opt,&.life-opt,&.blogs-opt,&.enquire-opt,&.programs-opt,&.bibm-opt,&.bihm-opt,&.register-opt,&.contact-opt{
                     color: red;
                 }
                 &:hover{

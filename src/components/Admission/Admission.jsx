@@ -7,7 +7,7 @@ const Admission = () => {
     return (
 
         <>
-        <NavBar/>
+        <NavBar admission='admission-opt'/>
         <SlideShow/>
             <div className="admission">
                 <div className="entry-requirement">
@@ -50,7 +50,6 @@ const Admission = () => {
                 <img src={require('../../assets/Admission/career.png')} alt="Image" className="bgImg"/>
             </div>
 
-//
             <div className="image-section">
                 <div className="image-wrapper">
                     <img src={require("../../assets/Admission/Group 152.jpg")} alt="Image" />
@@ -60,7 +59,6 @@ const Admission = () => {
                     </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             <Footer/>
         </>
 

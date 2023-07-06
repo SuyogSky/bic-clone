@@ -87,6 +87,10 @@
     font-family: var(--pFont);
     font-weight: 400;
     // margin: 0 37px;
+    @media (max-width: 650px) {
+        font-size: 14px;
+        
+    }
 }
 
 .div_Content_Image {

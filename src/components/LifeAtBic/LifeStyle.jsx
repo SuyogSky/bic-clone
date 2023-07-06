@@ -216,7 +216,7 @@ const prevSlide = () => {
 }
   return (
     <>
-      <NavBar />
+      <NavBar life='life-opt'/>
       <div className="top-container">
         <div className="top-first-partition">
           <Slideshow/>

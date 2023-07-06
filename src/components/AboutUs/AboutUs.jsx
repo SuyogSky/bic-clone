@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 const Landing = () => {
   return(
     <>
-        <NavBar pos='sticky'/>
+        <NavBar pos='sticky' about='about-opt'/>
         <br /><br /><br /><br />
         <MainContainer/>
         <Footer/>

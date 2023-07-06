@@ -4,7 +4,9 @@ import React from "react";
 import AboutUs from "../../../assets/AboutImages/aboutusimage.png" 
 import '../MainContainer/MainContainer.scss'
 import Logo from '../../../assets/Images/biratnagar-normal-logo.svg'
+import { useNavigate } from "react-router-dom";
 const MainContainer = () => {
+  const navigate = useNavigate()
   return(
 <div className="maincontainer-aboutus">
   <h1>About</h1>
@@ -19,7 +21,7 @@ const MainContainer = () => {
     <div className="text">
     <h2>Achieve Your Goals With BIC</h2>
     <p>Biratnagar International College is the first UK University College in Eastern Nepal offering globally renowned and internationally recognised Business and Hospitality Degree Programe. We deliver BSc (Hons) in International Business Management and BA (Hons) International Hospitality Management in partnership with the University of Wolverhampton to produce global business leaders.</p>
-    <button>Enquiry More</button>
+    <button onClick={()=>navigate('/enquire')}>Enquiry More</button>
     </div>
   </div>
 </div>

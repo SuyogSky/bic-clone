@@ -105,7 +105,7 @@ const BIBM = () => {
     };
     return (
         <>
-        <NavBar/>
+        <NavBar courses='course-opt' bibm='bibm-opt'/>
             <div className="BIBM_Container" ref={imageRef}>
                 <div className="BIBM_Photo">
                     <img src={require("../../../assets/BIBM/home-banner.png")} alt="Image" className="image" />
