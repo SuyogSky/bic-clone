@@ -51,7 +51,7 @@ const EditBlog = ({ blog_id }) => {
             formData.append('writer_image', writerImagePath);
             formData.append('writer_name', writerName);
 
-            await Axios.post(`http://${ip}:5000/api/post`, formData, {
+            await Axios.post(`https://${ip}/api/post`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

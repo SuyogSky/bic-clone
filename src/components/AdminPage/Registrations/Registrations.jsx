@@ -19,7 +19,7 @@ const Registrations = () => {
     const [registrations, setRegistrations] = useState([])
     useEffect(() => {
         const fetchRegistrations = async () => {
-            await Axios.get(`http://${ip}:5000/api/admin/enquiry`, {
+            await Axios.get(`https://${ip}/api/admin/enquiry`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -41,7 +41,7 @@ const Registrations = () => {
         const shouldDelete = confirm('Do You Want to Delete This Registration Details?');
 
         if(shouldDelete){
-            Axios.delete(`http://${ip}:5000/api/admin/enquiry`, {
+            Axios.delete(`https://${ip}/api/admin/enquiry`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -62,7 +62,7 @@ const Registrations = () => {
         const shouldClear = confirm('Do You Want to Clear All Registration Details?');
 
         if(shouldClear){
-            Axios.get(`http://${ip}:5000/api/admin/cleare`, {
+            Axios.delete(`https://${ip}/api/admin/cleare`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -99,7 +99,7 @@ const Registrations = () => {
                                     return (
                                         // <div className="blog mainBlog">
                                         //     <div className="img">
-                                        //         <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
+                                        //         <img src={`https://192.168.206.193/blog/${blog.blog_image}`} alt=""/>
                                         //     </div>
                                         //     <h4>{blog.title} - {blog.writer_name}hahahah</h4>
                                         // </div>

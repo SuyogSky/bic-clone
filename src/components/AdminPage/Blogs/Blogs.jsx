@@ -19,11 +19,11 @@ const Blogs = () => {
     const win = sessionStorage;
     const [msg, setMsg] = useState(null)
     const [blogs, setBlogs] = useState([]);
-    const imagePath = `http://${ip}:5000/blog/`;
+    const imagePath = `https://${ip}/blog/`;
     
     useEffect(() => {
         const fetchBlogs = async () => {
-            await Axios.get(`http://${ip}:5000/api/post`).then((response) => {
+            await Axios.get(`https://${ip}/api/post`).then((response) => {
                 if (response.data.success == 1) {
                     setBlogs(response.data.data);
                     setMsg()
@@ -43,7 +43,7 @@ const Blogs = () => {
         const shouldDelete = confirm('Do You Want to Delete This Post?');
 
         if (shouldDelete) {
-            Axios.delete(`http://${ip}:5000/api/admin/post`, {
+            Axios.delete(`https://${ip}/api/admin/post`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -84,7 +84,7 @@ const Blogs = () => {
             formData.append('writer_image', writerImagePath);
             formData.append('writer_name', writerName);
 
-            await Axios.patch(`http://${ip}:5000/api/admin/post`, formData, {
+            await Axios.patch(`https://${ip}/api/admin/post`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }
@@ -109,7 +109,7 @@ const Blogs = () => {
         const shouldClear = confirm('Do You Want to Delete All Blogs?');
 
         if(shouldClear){
-            Axios.delete(`http://${ip}:5000/api/admin/postall`, {
+            Axios.delete(`https://${ip}/api/admin/postall`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -145,7 +145,7 @@ const Blogs = () => {
                                     return (
                                         // <div className="blog mainBlog">
                                         //     <div className="img">
-                                        //         <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
+                                        //         <img src={`https://192.168.206.193/blog/${blog.blog_image}`} alt=""/>
                                         //     </div>
                                         //     <h4>{blog.title} - {blog.writer_name}hahahah</h4>
                                         // </div>
@@ -252,7 +252,10 @@ const Blogs = () => {
             <>
                 <AdminNavigation />
                 <div className="blogs-table">
-                    <div className="add-button" onClick={() => navigate('/add-blog')}><BiPlusMedical /><p>Add Blog</p></div>
+                    <div className="buttons">
+                        <div className="add-button" onClick={() => navigate('/add-blog')}><BiPlusMedical /><p>Add Blog</p></div>
+                        <div className="clear-button" onClick={() => clearAll()}><RiDeleteBinLine /><p>Clear All</p></div>
+                    </div>
                     <div className="empty">
                         <FcEmptyFilter />
                         {msg}

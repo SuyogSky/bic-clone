@@ -16,7 +16,7 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
         console.log(name, email, message)
-        Axios.post(`http://${ip}:5000/api/contact`,{
+        Axios.post(`https://${ip}/api/contact`,{
             name: name,
             email: email,
             message: message

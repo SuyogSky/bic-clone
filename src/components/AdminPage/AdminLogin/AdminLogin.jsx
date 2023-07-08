@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
     const adminLogin = (e)=>{
         e.preventDefault();
-        Axios.post(`http://${ip}:5000/api/admin`,{
+        Axios.post(`https://${ip}/api/admin`,{
             name: userName,
             password: password
         }).then((response) =>{

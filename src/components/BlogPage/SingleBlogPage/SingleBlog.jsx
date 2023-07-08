@@ -16,7 +16,7 @@ const SingleBlog = () => {
         // Add the query parameter to the dependency array if you want to watch for changes
 
         const fetchSingleBlog = async () =>{
-            await Axios.get(`http://${ip}:5000/api/admin/recent`,{
+            await Axios.get(`https://${ip}/api/admin/recent`,{
                 params: {
                     post_id: paramValue
                 }
@@ -39,7 +39,7 @@ const SingleBlog = () => {
     
     //     const fetchSingleBlog = async () => {
     //       try {
-    //         const response = await Axios.get(`http://${ip}:5000/api/admin/postthree`, {
+    //         const response = await Axios.get(`https://${ip}/api/admin/postthree`, {
     //           params: {
     //             post_id: paramValue
     //           }

@@ -76,7 +76,7 @@ const Testimonial = () => {
                                 <img src={Story1} alt="" />
                             </div>
                             <div className="content">
-                                <h4>Sanu</h4>
+                                <h4>Student Name</h4>
                                 <p>Recipient of 15 day Summer School, 2017 - A15 Batch</p>
                                 <p className="story">“The Summer School at the University of Wolverhampton has been a great time of learning and experience for me. I was extremely satisfied with the facilities and especially liked the trips that were arranged for us to London, Stratford-upon-Avon, Warwick Castle and many more. I met many people from different countries and this has helped me during classes which were a mixture of English, cultural learning and animation. The Summer School was one of the most exciting days of my life.”</p>
                             </div>
@@ -87,7 +87,7 @@ const Testimonial = () => {
                                 <img src={Story1} alt="" />
                             </div>
                             <div className="content">
-                                <h4>Sanu</h4>
+                                <h4>Student Name</h4>
                                 <p>Recipient of 15 day Summer School, 2017 - A15 Batch</p>
                                 <p className="story">“The Summer School at the University of Wolverhampton has been a great time of learning and experience for me. I was extremely satisfied with the facilities and especially liked the trips that were arranged for us to London, Stratford-upon-Avon, Warwick Castle and many more. I met many people from different countries and this has helped me during classes which were a mixture of English, cultural learning and animation. The Summer School was one of the most exciting days of my life.”</p>
                             </div>
@@ -98,7 +98,7 @@ const Testimonial = () => {
                                 <img src={Story1} alt="" />
                             </div>
                             <div className="content">
-                                <h4>Sanu</h4>
+                                <h4>Student Name</h4>
                                 <p>Recipient of 15 day Summer School, 2017 - A15 Batch</p>
                                 <p className="story">“The Summer School at the University of Wolverhampton has been a great time of learning and experience for me. I was extremely satisfied with the facilities and especially liked the trips that were arranged for us to London, Stratford-upon-Avon, Warwick Castle and many more. I met many people from different countries and this has helped me during classes which were a mixture of English, cultural learning and animation. The Summer School was one of the most exciting days of my life.”</p>
                             </div>
@@ -109,7 +109,7 @@ const Testimonial = () => {
                                 <img src={Story1} alt="" />
                             </div>
                             <div className="content">
-                                <h4>Sanu</h4>
+                                <h4>Student Name</h4>
                                 <p>Recipient of 15 day Summer School, 2017 - A15 Batch</p>
                                 <p className="story">“The Summer School at the University of Wolverhampton has been a great time of learning and experience for me. I was extremely satisfied with the facilities and especially liked the trips that were arranged for us to London, Stratford-upon-Avon, Warwick Castle and many more. I met many people from different countries and this has helped me during classes which were a mixture of English, cultural learning and animation. The Summer School was one of the most exciting days of my life.”</p>
                             </div>

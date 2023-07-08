@@ -1,3 +1,3 @@
-const ip = "192.168.206.193";
+const ip = "hosting-bic.onrender.com";
 
 module.exports =  ip

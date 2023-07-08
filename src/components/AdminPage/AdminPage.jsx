@@ -9,7 +9,7 @@ const AdminPage = () => {
     //     const adminLogin = ()=>{
     //         const win = sessionStorage;
     //         console.log(win.getItem('token'))
-    //         Axios.get(`http://192.168.206.193:5000/api/admin/enquiry`,{
+    //         Axios.get(`httpsss://192.168.206.193/api/admin/enquiry`,{
     //             headers: {
     //                 Authorization: `Bearer ${win.getItem('token')}`
     //               }

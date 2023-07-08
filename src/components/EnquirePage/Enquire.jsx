@@ -24,7 +24,7 @@ const Enquire = () => {
         e.preventDefault();
         let name = firstName.trim() + ' ' + lastName.trim()
         console.log(name)
-        Axios.post(`http://${ip}:5000/api/enquiry`,{
+        Axios.post(`https://${ip}/api/enquiry`,{
             name: name,
             phone: phone,
             email: email,

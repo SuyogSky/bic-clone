@@ -18,7 +18,7 @@ const Contacts = () => {
     useEffect(() => {
         const fetchContacts = async () => {
             console.log('jajajja')
-            await Axios.get(`http://${ip}:5000/api/admin/contact`, {
+            await Axios.get(`https://${ip}/api/admin/contact`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -42,7 +42,7 @@ const Contacts = () => {
         const shouldDelete = confirm('Do You Want to Delete This Contact Details?');
 
         if(shouldDelete){
-            Axios.delete(`http://${ip}:5000/api/admin/contact`, {
+            Axios.delete(`https://${ip}/api/admin/contact`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -63,7 +63,7 @@ const Contacts = () => {
         const shouldClear = confirm('Do You Want to Clear All Contact Details?');
 
         if(shouldClear){
-            Axios.get(`http://${ip}:5000/api/admin/clearc`, {
+            Axios.delete(`https://${ip}/api/admin/clearc`, {
                 headers: {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
@@ -98,7 +98,7 @@ const Contacts = () => {
                                     return (
                                         // <div className="blog mainBlog">
                                         //     <div className="img">
-                                        //         <img src={`http://192.168.206.193:5000/blog/${blog.blog_image}`} alt=""/>
+                                        //         <img src={`https://192.168.206.193/blog/${blog.blog_image}`} alt=""/>
                                         //     </div>
                                         //     <h4>{blog.title} - {blog.writer_name}hahahah</h4>
                                         // </div>
