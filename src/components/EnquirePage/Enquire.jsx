@@ -20,7 +20,10 @@ const Enquire = () => {
     const [referal, setReferal] = useState('');
     // const [name, setName] = useState('');
 
+    const [loading, setLoading] = useState(false)
+
     const enquireNow = (e)=>{
+        setLoading(true)
         e.preventDefault();
         let name = firstName.trim() + ' ' + lastName.trim()
         console.log(name)
@@ -31,6 +34,7 @@ const Enquire = () => {
             sector: sector,
             referral: referal
         }).then((response) =>{
+            setLoading(false)
             if(response.data.success == 1){
                 alert('Details Submitted.')
             }
@@ -87,7 +91,7 @@ const Enquire = () => {
                         </div>
 
                         <br />
-                        <input type="submit" value='Submit'/>
+                        {loading?<button>Submitting...</button>:<input type="submit" value='Submit'/>}
                     </form>
                 </div>
             </section>

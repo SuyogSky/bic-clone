@@ -22,6 +22,7 @@ const AddBlog = () => {
     const [blogHeading, setBlogHeading] = useState('')
     const [blogContent, setBlogContent] = useState('')
 
+    const [loading, setLoading] = useState(false)
     // const uploadBlog = (e) => {
     //     e.preventDefault();
     //     console.log(writerImagePath)
@@ -43,7 +44,7 @@ const AddBlog = () => {
 
     const uploadBlog = async (event) => {
         event.preventDefault();
-        console.log(blogContent)
+        setLoading(true)
         try {
             const formData = new FormData();
             formData.append('title', blogHeading);
@@ -57,8 +58,8 @@ const AddBlog = () => {
                     'Content-Type': 'multipart/form-data',
                 },
             }).then((response) => {
-                console.log('res',response)
                 if (response.data.success == 1) {
+                    setLoading(false)
                     alert('Blog Added Successfully.')
                     navigate('/admin-page')
                 }
@@ -139,7 +140,7 @@ const AddBlog = () => {
                         </div>
 
                         <div className="upload-btn">
-                            <button type="submit">Upload Blog</button>
+                            {loading?<button className="loading">Uploading...</button>:<button type="submit">Upload Blog</button>}
                         </div>
 
                         <div className="cross-btn" onClick={()=>navigate('/admin-blogs')}>

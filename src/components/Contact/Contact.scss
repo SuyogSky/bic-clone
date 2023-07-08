@@ -67,6 +67,9 @@
                 color: white;
                 font-family: var(--pFont);
                 font-size: 18px;
+                &.loading{
+                    background-color: rgba(0,0,0,0.5);
+                }
             }
         }
         .map{

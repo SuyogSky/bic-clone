@@ -13,10 +13,14 @@ import { useNavigate } from "react-router-dom";
 const BlogPage = () => {
     const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         const fetchBlogs = async () =>{
             await Axios.get(`https://${ip}/api/post`).then((response) =>{
                 setBlogs(response.data.data);
+                setTimeout(()=>{
+                    setLoading(false)
+                },3000)
             });
         }
         fetchBlogs();
@@ -27,10 +31,16 @@ const BlogPage = () => {
         dropped?setDropped(false):setDropped(true)
     }
 
-    return(
-        <>
+    return (
+    <>
             <NavBar blogs='blogs-opt'/>
-            <section className="blog-page">
+            {
+                loading?
+                <div className="ls">
+                    <div class="spinner"></div>
+                </div>
+                :
+                <section className="blog-page">
                 <div className="display-blogs">
                     {blogs
                         ?
@@ -115,6 +125,7 @@ const BlogPage = () => {
                 
                 }
             </section>
+            }
             <Footer/>
         </>
     )
