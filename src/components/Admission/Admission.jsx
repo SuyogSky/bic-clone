@@ -22,7 +22,7 @@ const Admission = () => {
                             <li>A minimum score of C (50%) or above is required in the SEE Mathematics exam.</li>
                         </ul>
                     </div>
-                    <img src={require('../../assets/Admission/spring.png')} alt="Image" />
+                    <img alt="" src={require('../../assets/Admission/spring.png')} />
                 </div>
 
                 <div className="academic-level">
@@ -34,7 +34,7 @@ const Admission = () => {
                             <li>Pass in General Paper or English Language or IELTS 6 or PTE 53.</li>
                         </ul>
                     </div>
-                    <img src={require('../../assets/Admission/spring.png')} alt="Image" />
+                    <img alt="" src={require('../../assets/Admission/spring.png')}/>
                 </div>
 
                 <div className="academic-level">
@@ -44,15 +44,15 @@ const Admission = () => {
                             Applicants not meeting the aforementioned criteria for English can demonstrate their English proficiency with the following internationally recognized English Tests.
                         </p>
                     </div>
-                    <img src={require('../../assets/Admission/spring.png')} alt="Image" />
+                    <img alt="" src={require('../../assets/Admission/spring.png')}/>
                 </div>
 
-                <img src={require('../../assets/Admission/career.png')} alt="Image" className="bgImg"/>
+                <img alt="" src={require('../../assets/Admission/career.png')} className="bgImg"/>
             </div>
 
             <div className="image-section">
                 <div className="image-wrapper">
-                    <img src={require("../../assets/Admission/Group 152.jpg")} alt="Image" />
+                    <img alt="" src={require("../../assets/Admission/Group 152.jpg")} />
                     <div className="image-overlay">
                         <h1 className="image-text">What's Your Next Step?</h1>
                         <button className="apply-buttons">Apply Now</button>

@@ -1,6 +1,6 @@
 import React from "react";
 import './AdminNavigation.scss';
-import { BiPlusMedical, BiEditAlt } from 'react-icons/bi'
+import { BiEditAlt } from 'react-icons/bi'
 import { useNavigate } from "react-router-dom";
 const AdminNavigation = () => {
     const navigate = useNavigate();

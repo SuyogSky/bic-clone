@@ -5,7 +5,6 @@ import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
 import { MdLocationOn } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 import BannerImg from '../../../assets/Landing/landing-banner.png'
-import { click } from "@testing-library/user-event/dist/click";
 
 const Banner = () => {
 

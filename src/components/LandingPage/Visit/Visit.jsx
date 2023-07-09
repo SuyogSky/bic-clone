@@ -3,8 +3,6 @@ import './Visit.scss';
 import Library from '../../../assets/Landing/library.jpg';
 import Canteen from '../../../assets/Landing/canteen.jpg';
 import Lab from '../../../assets/Landing/lab.jpg';
-import Class from '../../../assets/Landing/class.jpg';
-import TableTennis from '../../../assets/Landing/tabletennis.jpg';
 import BasketBall from '../../../assets/Landing/basketball.jpg';
 import Lecture from '../../../assets/Landing/lecturehall.jpg';
 

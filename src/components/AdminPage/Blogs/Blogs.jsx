@@ -24,11 +24,11 @@ const Blogs = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             await Axios.get(`https://${ip}/api/post`).then((response) => {
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     setBlogs(response.data.data);
                     setMsg()
                 }
-                else if (response.data.success == 0) {
+                else if (response.data.success === 0) {
                     setMsg(response.data.message);
                 }
                 console.log(response.data)
@@ -51,7 +51,7 @@ const Blogs = () => {
                     post_id: delId
                 }
             }).then((response) => {
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     window.location.href = '/admin-blogs'
                     // navigate('/admin-blogs')
                 }
@@ -90,7 +90,7 @@ const Blogs = () => {
                 }
             }).then((response) => {
                 console.log('res',response)
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     alert('Blog Updated Successfully.')
                     navigate('/admin-page')
                 }
@@ -115,13 +115,13 @@ const Blogs = () => {
                 },
             }).then((response) => {
                 console.log(response.data)
-                if(response.data.success == 0){
+                if(response.data.success === 0){
                     window.location.href = '/contacts'
                 }
             })
         }
     }
-    return msg == null ?
+    return msg === null ?
         (
             <>
                 <AdminNavigation />

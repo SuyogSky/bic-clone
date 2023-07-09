@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import './Enquire.scss';
-import Captcha from '../../assets/Enquire/recaptcha-logo.png'
 import { IoMdMail } from 'react-icons/io';
 import { FaUserGraduate } from 'react-icons/fa';
 import { BiLinkAlt } from 'react-icons/bi';
@@ -35,7 +34,7 @@ const Enquire = () => {
             referral: referal
         }).then((response) =>{
             setLoading(false)
-            if(response.data.success == 1){
+            if(response.data.success === 1){
                 alert('Details Submitted.')
             }
         })

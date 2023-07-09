@@ -5,15 +5,11 @@ import Axios from "axios";
 import ip from "../../../ip-config/ip";
 import imgPath from "../../../ip-config/imgPath";
 const SingleBlog = () => {
-    const [blogId, setBlogId] = useState()
     const [mainBlog, setMainBlog] = useState([])
     const [recentBlogs, setRecentBlogs] = useState([])
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const paramValue = urlParams.get('id');
-        setBlogId(paramValue)
-
-        // Add the query parameter to the dependency array if you want to watch for changes
 
         const fetchSingleBlog = async () =>{
             await Axios.get(`https://${ip}/api/admin/recent`,{
@@ -22,7 +18,7 @@ const SingleBlog = () => {
                 }
             }).then((response) =>{
                 // setMainBlog(response.data);
-                if(response.data.success == 1){
+                if(response.data.success === 1){
                     setMainBlog(response.data.mainData)
                     setRecentBlogs(response.data.recentData)
                 }

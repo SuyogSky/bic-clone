@@ -3,13 +3,6 @@ import './Testimonial.scss';
 import Story1 from '../../../assets/Landing/Story1.jpg';
 
 const Testimonial = () => {
-    // const [storyIndex, setStoryIndex] = useState(0)
-
-    // const [index1, setIndex1] = useState(false)
-    // const [index2, setIndex2] = useState(false)
-    // const [index3, setIndex3] = useState(false)
-    // const [index4, setIndex4] = useState(false)
-
     const [slide, setSlide] = useState(0);
 
     const [is1, setIs1] = useState(true);
@@ -29,24 +22,6 @@ const Testimonial = () => {
         }
         else if(is4){
             setSlide(-300)
-        }
-    }
-
-    const nextSlide = () => {
-        if(slide==-200){
-            setSlide(0)
-        }
-        else{
-            setSlide(slide-100);
-        }
-    }
-
-    const prevSlide = () => {
-        if(slide == 0){
-            setSlide(-200)
-        }
-        else{
-            setSlide(slide+100);
         }
     }
     useEffect(()=>{

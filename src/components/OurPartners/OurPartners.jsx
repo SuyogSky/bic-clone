@@ -29,12 +29,12 @@ const Partners = () => {
         </div>
 
         <div className="Container1">
-          <img className="Wolver1" src={image1} alt="Image" />
+          <img className="Wolver1" src={image1} alt="" />
           <div className="Block1" ></div>
           <div className="Block2" ></div>
 
           <div className="partner-content">
-            <img src={image2} alt="Image" />
+            <img src={image2} alt="" />
 
             <h1>Our University</h1>
             <p>
@@ -51,16 +51,15 @@ const Partners = () => {
       </div>
 
 
-      {/* Section 2 */}
       <div className="SectionB" >
 
         <div className="Container2">
-          <img className="Wolver2" src={image4} alt="Image" />
+          <img className="Wolver2" src={image4} alt="" />
           <div className="Block3" ></div>
           <div className="Block4" ></div>
 
           <div className="partner-content2">
-            <img src={image3} alt="Image" />
+            <img src={image3} alt="" />
 
             <h1>Innovate Nepal</h1>
             <p>
@@ -80,34 +79,34 @@ const Partners = () => {
       <div className="SectionC" >
 
         <div className="Container3">
-          <img className="Wolver3" src={image6} alt="Image" />
+          <img className="Wolver3" src={image6} alt="" />
           <div className="Block5" ></div>
           <div className="Block6" ></div>
 
           <div className="partner-content3">
             <div className="corporate-top">
-              <img src={image5} alt="Image" className="hand-shake" />
+              <img src={image5} alt="" className="hand-shake" />
               <h1>Corporate Partners</h1>
             </div>
             <div className="partner-info">
               <div className="C1">
                 <h4>Sanima Bank</h4>
                 <div className="image">
-                  <img src={image8} alt="" />
+                  <img src={image8}  alt=""/>
                 </div>
               </div>
 
               <div className="C2">
                 <h4>Nepalirika Hotel</h4>
                 <div className="image">
-                  <img src={image7} alt="" />
+                  <img src={image7}  alt=""/>
                 </div>
               </div>
 
               <div className="C3">
                 <h4>Chamber of Industries Morang</h4>
                 <div className="image">
-                  <img src={image9} alt="" />
+                  <img src={image9}  alt=""/>
                 </div>
               </div>
             </div>

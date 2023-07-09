@@ -7,7 +7,6 @@ const AdminLogin = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState('')
-    const [successMsg, setSuccessMsg] = useState('')
 
     const win = window.sessionStorage;
 
@@ -17,13 +16,11 @@ const AdminLogin = () => {
             name: userName,
             password: password
         }).then((response) =>{
-            if(response.data.success == 0){
-                setSuccessMsg('')
+            if(response.data.success === 0){
                 setErrMsg(response.data.message)
             }
             else{
                 setErrMsg('')
-                setSuccessMsg(response.data.message)
                 win.setItem('token', response.data.token)
                 alert('Login Successfull.')
                 window.location.href = '/admin-page'

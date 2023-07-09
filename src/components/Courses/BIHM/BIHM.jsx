@@ -5,7 +5,7 @@ import Module from './Module/Module'
 import Group from '../Group/Group'
 
 import { ScrollTrigger } from "gsap/all";
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import Footer from "../../Footer/Footer";
 const BIHM = () => {
@@ -104,7 +104,7 @@ const BIHM = () => {
             {/* Photo and Heading */}
             <div className="BIHM_Container" ref={imageRef}>
                 <div className="BIHM_Photo">
-                    <img src={require("../../../assets/BIHM/about-banner2.png")} alt="Image" className="image" />
+                    <img alt="" src={require("../../../assets/BIHM/about-banner2.png")}  className="image" />
                 </div>
             </div>
             <div className="BIHM_Heading">
@@ -115,7 +115,7 @@ const BIHM = () => {
             <div className="about_BIHM" ref={anotherRef}>
                 <div className="contains_BIHM">
                     <div className="about_Image">
-                        <img src={require("../../../assets/BIHM/Requirement.png")} alt="Image" className="Nailshika_Image" />
+                        <img alt="" src={require("../../../assets/BIHM/Requirement.png")}  className="Nailshika_Image" />
                         <div className="frame">
                             <div className="red_BIHM"></div>
                             <div className="blue_BIHM"></div>

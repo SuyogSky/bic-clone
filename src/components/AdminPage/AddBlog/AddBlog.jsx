@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './AddBlog.scss'
-import NavBar from "../../NavBar/NavBar";
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 import { ImCross } from 'react-icons/im'
 import Avatar from '../../../assets/Admin/Profile.png'
@@ -58,7 +57,7 @@ const AddBlog = () => {
                     'Content-Type': 'multipart/form-data',
                 },
             }).then((response) => {
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     setLoading(false)
                     alert('Blog Added Successfully.')
                     navigate('/admin-page')

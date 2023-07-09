@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import AdminNavigation from "../AdminNavigation/AdminNavigation";
 import './Contacts.scss';
 
-import { BiPlusMedical, BiEditAlt } from 'react-icons/bi'
 import { RiDeleteBinLine } from 'react-icons/ri'
 import { FcEmptyFilter } from 'react-icons/fc'
-import { useNavigate } from "react-router-dom";
 import Axios from 'axios';
 import ip from "../../../ip-config/ip";
 
 const Contacts = () => {
-    const navigate = useNavigate()
     const win = sessionStorage;
     const [msg, setMsg] = useState(null)
 
@@ -23,11 +20,11 @@ const Contacts = () => {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
             }).then((response) => {
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     setContacts(response.data.data);
                     setMsg()
                 }
-                else if (response.data.success == 0) {
+                else if (response.data.success === 0) {
                     setMsg(response.data.message);
                 }
                 console.log('response:', response.data)
@@ -35,7 +32,7 @@ const Contacts = () => {
         }
         fetchContacts();
         console.log(contacts)
-    }, []);
+    });
 
     const deleteContact = (delId) => {
         // eslint-disable-next-line no-restricted-globals
@@ -50,7 +47,7 @@ const Contacts = () => {
                     contact_id: delId
                 }
             }).then((response) => {
-                if(response.data.success == 1){
+                if(response.data.success === 1){
                     window.location.href = '/contacts'
                     // navigate('/admin-blogs')
                 }
@@ -69,13 +66,13 @@ const Contacts = () => {
                 },
             }).then((response) => {
                 console.log(response.data)
-                if(response.data.success == 0){
+                if(response.data.success === 0){
                     window.location.href = '/contacts'
                 }
             })
         }
     }
-    return msg==null?
+    return msg===null?
     (
         (
             <>

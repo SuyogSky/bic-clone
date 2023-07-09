@@ -7,24 +7,9 @@ import { FiFacebook } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa';
 
 
-import React, { useState } from "react";
+import React from "react";
 
-import fbicon from '../../assets/Footer/fbicon.png';
-import instaicon from '../../assets/Footer/instaicon.png';
-import call from '../../assets/Footer/call.png';
-import email from '../../assets/Footer/email.png';
-import location from '../../assets/Footer/location.png';
 import { useNavigate } from "react-router-dom";
-
-
-// function redirecto(name) {
-
-// }
-
-const redirecto = () => {
-    window.location.href("http://www.w3schools.com");
-    return;
-}
 
 const Footer = () => {
     const navigate = useNavigate();

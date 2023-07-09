@@ -5,13 +5,10 @@ import Axios from "axios";
 import { FaAngleDown } from 'react-icons/fa'
 import ip from "../../ip-config/ip";
 import Footer from "../Footer/Footer";
-import SingleBlog from "./SingleBlogPage/SingleBlog";
-import { useNavigate } from "react-router-dom";
 
 
 
 const BlogPage = () => {
-    const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {

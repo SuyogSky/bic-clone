@@ -1,27 +1,17 @@
 import React from "react";
 import "./LifeStyle.scss";
 import ing_wolv_logo from "../../assets/LifeStyle/ing-wolverhampton.png";
-import volume_img from "../../assets/LifeStyle/volume.png";
-import prev from "../../assets/LifeStyle/prev.png";
-import next from "../../assets/LifeStyle/next.png";
 import teaching from "../../assets/Images/teaching.png";
 import assessment from "../../assets/Images/Assessment.png";
-import buisness_exp from "../../assets/LifeStyle/b_exp.png";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./slider_css/slider.css";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { ScrollTrigger } from "gsap/all";
-import slide_image_1 from "../LifeAtBic/imageSlider/images/slide-1.png";
-import slide_image_2 from "../LifeAtBic/imageSlider/images/slide-2.png";
-import slide_image_3 from "../LifeAtBic/imageSlider/images/slide-3.png";
 import gsap from "gsap";
-import { useState } from "react";
 import Slideshow from "../Admission/Slideshow/Slideshow";
 import Footer from "../Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +24,6 @@ const LifeStyle = () => {
   const anotherRef4 = useRef(null);
   const anotherRef5 = useRef(null);
   const anotherRef6 = useRef(null);
-  const anotherRef7 = useRef(null);
 
   useLayoutEffect(() => {
     const el1 = imageRef.current;
@@ -153,146 +142,12 @@ const LifeStyle = () => {
     });
   }, []);
 
-  // useLayoutEffect(() => {
-  //   const el1 = imageRef.current;
-  //   // const el2 = anotherRef.current;
-  //   // const el3 = anotherRef2.current;
-  //   // const el4 = anotherRef3.current;
-  //   // const el5 = anotherRef4.current;
-  //   // const el6 = anotherRef5.current;
-  //   // const el7 = anotherRef6.current;
-  //   // const el8 = anotherRef7.current;
-
-  // //   gsap.fromTo(
-  // //     [el1],
-  // //     { opacity: 0, y: 100 },
-  // //     {
-  // //       opacity: 1,
-  // //       y: 0,
-  // //       duration: 2,
-  // //       ease: 'power2.inOut',
-  // //       scrollTrigger: {
-  // //         trigger: [el1],
-  // //       },
-  // //     }
-  // //   );
-  // // }, []);
-
-  // // useLayoutEffect(() => {
-  // //   const el2 = anotherRef.current;
-  // //   gsap.fromTo(
-  // //     [el2],
-  // //     { opacity: 0, y: 100 },
-  // //     {
-  // //       opacity: 1,
-  // //       y: 0,
-  // //       duration: 2,
-  // //       ease: 'power2.inOut',
-  // //       scrollTrigger: {
-  // //         trigger: [el2],
-  // //       },
-  // //     }
-  // //   );
-  // // }, []);
-
-  const [slide, setSlide] = useState(0)
-
-  const nextSlide = () => {
-    if(slide==-200){
-        setSlide(0)
-    }
-    else{
-        setSlide(slide-100);
-    }
-}
-
-const prevSlide = () => {
-    if(slide == 0){
-        setSlide(-200)
-    }
-    else{
-        setSlide(slide+100);
-    }
-}
   return (
     <>
       <NavBar life='life-opt'/>
       <div className="top-container">
         <div className="top-first-partition">
           <Slideshow/>
-          {/* <div className="top-container-first-wrapper">
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              centeredSlidesBounds={1000}
-              loop={true}
-              // centerInsufficientSlides={true}
-              slidesPerView={"auto"}
-              autoplay={50}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 100,
-                depth: 100,
-                modifier: 2.5,
-                slideShadows: false,
-              }}
-              pagination={{ el: ".swiper-pagination", clickable: true }}
-              navigation={{
-                nextEl: ".button-prev-lifestyle",
-                prevEl: ".button-after-lifestyle",
-                clickable: true,
-              }}
-              modules={[EffectCoverflow, Pagination, Navigation]}
-              className="swiper_container"
-            >
-              <SwiperSlide>
-                <img
-                  src={slide_image_1}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={slide_image_2}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={slide_image_3}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={slide_image_1}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={slide_image_2}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={slide_image_3}
-                  className="slide_lifestyle_img"
-                  alt="slide_image"
-                />
-              </SwiperSlide>
-              <div className="slider-controler">
-                <div className="swiper-pagination"></div>
-              </div>
-            </Swiper>
-          </div> */}
         </div>
         <div className="top-second-partition">
           <div className="top-second-first">
@@ -302,13 +157,12 @@ const prevSlide = () => {
               Biratnagar, Nepal. It was established in 2013 A.D..
             </p>
             <div className="top-first-partition-image">
-              <img src={ing_wolv_logo} />
+              <img alt="" src={ing_wolv_logo} />
             </div>
           </div>
           <div className="top-second-second">
             <h1>College</h1>
             <div>
-              {/* <img src={volume_img} className="volume" alt="" /> */}
               <div className="slider-controller">
                 <div className="swiper-pagination"></div>
               </div>
@@ -335,11 +189,11 @@ const prevSlide = () => {
             </div>
           </div>
           <div className="second">
-            <img src={teaching} alt="" />
+            <img alt="" src={teaching}  />
           </div>
         </div>
         <div className="third-teaching-lifestyle" ref={anotherRef}>
-          <img src={assessment} alt="" />
+          <img alt="" src={assessment}  />
           <section className="third-teaching-content-section">
             <div className="third-teaching-content">
               <h2>Assessment </h2>
@@ -379,7 +233,6 @@ const prevSlide = () => {
         <div className="fifth-content-experience" ref={anotherRef3}>
           <h2>Business Experience in Thailand</h2>
           <div className="fifth-content-experience-card">
-            {/* <img src={buisness_exp} alt="" /> */}
             <div className="fifth-content-experience-card-banner"></div>
             <div className="fifth-content-experience-card-content">
               <h2>Description</h2>

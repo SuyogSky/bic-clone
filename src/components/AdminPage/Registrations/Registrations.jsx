@@ -4,14 +4,11 @@ import './Registrations.scss';
 import { FcEmptyFilter } from 'react-icons/fc'
 
 
-import { BiPlusMedical, BiEditAlt } from 'react-icons/bi'
 import { RiDeleteBinLine } from 'react-icons/ri'
-import { useNavigate } from "react-router-dom";
 import Axios from 'axios';
 import ip from "../../../ip-config/ip";
 
 const Registrations = () => {
-    const navigate = useNavigate()
     const win = sessionStorage;
     const [msg, setMsg] = useState(null)
 
@@ -24,17 +21,17 @@ const Registrations = () => {
                     Authorization: `Bearer ${win.getItem('token')}`
                 },
             }).then((response) => {
-                if (response.data.success == 1) {
+                if (response.data.success === 1) {
                     setRegistrations(response.data.data);
                     setMsg()
                 }
-                else if (response.data.success == 0) {
+                else if (response.data.success === 0) {
                     setMsg(response.data.message);
                 }
             });
         }
         fetchRegistrations();
-    }, []);
+    });
 
     const deleteRegistration = (delId) => {
         // eslint-disable-next-line no-restricted-globals
@@ -49,7 +46,7 @@ const Registrations = () => {
                     enquire_id: delId
                 }
             }).then((response) => {
-                if(response.data.success == 1){
+                if(response.data.success === 1){
                     window.location.href = '/registrations'
                     // navigate('/admin-blogs')
                 }
@@ -68,13 +65,13 @@ const Registrations = () => {
                 },
             }).then((response) => {
                 console.log(response.data)
-                if(response.data.success == 0){
+                if(response.data.success === 0){
                     window.location.href = '/registrations'
                 }
             })
         }
     }
-    return msg==null?
+    return msg===null?
     (
         (
             <>

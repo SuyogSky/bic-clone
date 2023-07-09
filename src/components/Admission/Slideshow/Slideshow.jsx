@@ -24,37 +24,37 @@ const Slideshow = () => {
     return () => {
       clearInterval(interval); 
     };
-  }, []);
+  });
 
   return (
     <>
       <div className="Slideshow">
         <div className="left_Image">
           {slides.map((slide, index) => (
-            <img
+            <img alt=""
               key={index}
               src={slide}
-              alt="Image"
+              
               className={`Image${index + 1} ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
             />
           ))}
         </div>
         <div className="main_Image">
           {slides.map((slide, index) => (
-            <img
+            <img alt=""
               key={index}
               src={slide}
-              alt="Image"
+              
               className={`Image7 ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
             />
           ))}
         </div>
         <div className="right_Image">
           {slides.map((slide, index) => (
-            <img
+            <img alt=""
               key={index}
               src={slide}
-              alt="Image"
+              
               className={`Image${index + 4} ${currentSlide === index ? "active" : ""} ${currentSlide === (index - 1 + slides.length) % slides.length ? "previous" : ""}`}
             />
           ))}

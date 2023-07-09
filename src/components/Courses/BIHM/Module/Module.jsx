@@ -81,7 +81,7 @@ const Module = () => {
                         </div>
                         
                         <div className="div_Content_Image">
-                            <img src={`${require('../../../../assets/BIHM/Sa.webp')}`} alt="Image" />
+                            <img alt="" src={`${require('../../../../assets/BIHM/Sa.webp')}`}  />
                         </div>
                     </>
                 }
@@ -136,7 +136,7 @@ const Module = () => {
                         </div>
                         
                         <div className="div_Content_Image">
-                            <img src={`${require('../../../../assets/BIHM/Sa.webp')}`} alt="Image" />
+                            <img alt="" src={`${require('../../../../assets/BIHM/Sa.webp')}`}  />
                         </div>
                         
                     </>
@@ -200,7 +200,7 @@ const Module = () => {
                         </div>
                         
                         <div className="div_Content_Image">
-                            <img src={`${require('../../../../assets/BIHM/Sa.webp')}`} alt="Image" />
+                            <img alt="" src={`${require('../../../../assets/BIHM/Sa.webp')}`}  />
                         </div>
                     </>      
                 }

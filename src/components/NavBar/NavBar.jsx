@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import './NavBar.scss'
 import Logo from '../../assets/Images/biratnagar-normal-logo.svg'
-import { BsBookmarks, BsFillTelephoneFill } from 'react-icons/bs'
+import { BsFillTelephoneFill } from 'react-icons/bs'
 import { MdLocationOn } from 'react-icons/md'
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({pos, home, about, courses, partners, admission, life, blogs, enquire, programs, bibm, bihm, register, contact}) => {
+const NavBar = ({pos, about, courses, partners, admission, life, blogs, enquire, programs, bibm, bihm, register, contact}) => {
 
   const navigate = useNavigate();
 

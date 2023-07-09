@@ -3,7 +3,6 @@ import React from "react";
 
 import AboutUs from "../../../assets/AboutImages/aboutusimage.png" 
 import '../MainContainer/MainContainer.scss'
-import Logo from '../../../assets/Images/biratnagar-normal-logo.svg'
 import { useNavigate } from "react-router-dom";
 const MainContainer = () => {
   const navigate = useNavigate()

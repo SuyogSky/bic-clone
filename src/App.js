@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from "./components/LandingPage/Landing";
-import NavBar from './components/NavBar/NavBar';
 import Enquire from './components/EnquirePage/Enquire';
-import About from "./components/LandingPage/About/About";
 import AboutUs from "./components/AboutUs/AboutUs";
 import OurPartners from "./components/OurPartners/OurPartners";
 import Admission from "./components/Admission/Admission";
 import LifeAtBic from "./components/LifeAtBic/LifeStyle";
 import BlogPage from "./components/BlogPage/BlogPage";
-import Footer from "./components/Footer/Footer";
 import BIBM from "./components/Courses/BIBM/BIBM";
 import BIHM from "./components/Courses/BIHM/BIHM";
 import Programs from './components/Courses/Programes/Programmes'
 import AdminLogin from './components/AdminPage/AdminLogin/AdminLogin'
 
-import Admission2 from './components/BlogPage/admission';
-import Christmas from './components/BlogPage/christmas';
-import Darkness from './components/BlogPage/darkness';
-
 import AddBlog from './components/AdminPage/AddBlog/AddBlog';
 
 
-import BlogPagev2 from "./components/BlogPage/newBlog";
 import SingleBlog from "./components/BlogPage/SingleBlogPage/SingleBlog";
 import Contact from "./components/Contact/Contact";
 import AdminPage from "./components/AdminPage/AdminPage";
@@ -70,16 +62,8 @@ const App = () => {
             <Route path='/add-blog' element={win.getItem('token')?<AddBlog/>:<AdminLogin/>}></Route>
             <Route path="/admin-page" element={win.getItem('token')?<Blogs/>:<AdminLogin/>}></Route>
 
-            {/* <Route path='/blog' element={<Admission2/>}></Route> */}
-            <Route path='/xmas' element={<Christmas/>}></Route>
-            <Route path='/dark' element={<Darkness/>}></Route>
-
-
-
-            <Route path="/blogsv2" element={<BlogPagev2/>}></Route>
           </Routes>
         </BrowserRouter>}
-      {/* <Footer/> */}
       
     </>
   )

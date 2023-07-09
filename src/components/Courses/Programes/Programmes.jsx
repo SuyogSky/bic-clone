@@ -2,10 +2,9 @@ import React from "react";
 import "./programmes.scss"
 import NavBar from "../../NavBar/NavBar";
 import Group from '../Group/Group';
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import { useState } from "react";
 import Footer from "../../Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,7 +72,7 @@ const Programmes = () => {
       {/* Cover Photo with contains */}
       <div className="programmes" ref={imageRef}>
         <div className="Cover-Image">
-          <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover Image" />
+          <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="" />
           <div className="dim"></div>
           <div className="programmes_Content">
             <h1> Our Programmes </h1>
@@ -92,47 +91,23 @@ const Programmes = () => {
 
       {/* Courses Disturbution BIBM */}
       <div className="course_distrubution" ref={anotherRef2}>
-        <img src={require("../../../assets/Programmes/hat.png")} alt="hat Image" className="hat hat1"/>
+        <img src={require("../../../assets/Programmes/hat.png")} alt="hat" className="hat hat1"/>
         <div className="card bibm-card">
           <p>BIBM</p>
           <div className="image">
-            <img src={require("../../../assets/Programmes/Group.jpg")} alt="Cover Image" />
+            <img src={require("../../../assets/Programmes/Group.jpg")} alt="Cover" />
           </div>
         </div>
 
         <div className="card bihm-card">
           <div className="image">
-            <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover Image" />
+            <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover" />
           </div>
           <p>BIHM</p>
         </div>
 
-        <img src={require("../../../assets/Programmes/hat.png")} alt="hat Image" className="hat hat2"/>
-        {/* <div className="BIBM">
-                    <div className="course_Name">
-                        <p>BIBM</p>
-                    </div>
-                </div>
-                <div className="Course_BIBM">
-                    <img src={require("../../../assets/Programmes/Group.jpg")} alt="Cover Image" />
-                </div> */}
-
-        {/* Courses Disturbution BIHM */}
-        {/* <div className="BIHM">
-                    <div className="course_Names">
-                        <p>BIHM</p>
-                    </div>
-                </div>
-                <div className="Course_BIHM">
-                    <img src={require("../../../assets/Programmes/life_at_BIC.jpg")} alt="Cover Image" />
-                </div> */}
+        <img src={require("../../../assets/Programmes/hat.png")} alt="hat" className="hat hat2"/>
       </div>
-
-      {/* Hat */}
-      {/* <div className="hat">
-                <img src={require("../../../assets/Programmes/hat.png")} alt="hat Image" />
-            </div> */}
-
       <Group />
       <Footer />
     </>

@@ -5,7 +5,7 @@ const Group = () => {
   return (
     <div className="container">
       <div className="image-container">
-        <img src={require("../../../assets/Programmes/Group.jpg")} alt="Image" className="image" />
+        <img alt="" src={require("../../../assets/Programmes/Group.jpg")}  className="image" />
 
         <div className="text">
           Are you excited to join us?
