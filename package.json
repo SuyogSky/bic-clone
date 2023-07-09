@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "anyone": "^1.0.7",
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
     "gsap": "^3.12.2",
@@ -16,7 +17,7 @@
     "react-icons": "^4.10.1",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.14.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^5.0.0",
     "sass": "^1.63.6",
     "swiper": "^9.4.1",
     "web-vitals": "^2.1.4"
