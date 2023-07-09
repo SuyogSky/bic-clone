@@ -15,6 +15,7 @@ import gsap from "gsap";
 import Slideshow from "../Admission/Slideshow/Slideshow";
 import Footer from "../Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
+// MdHelpOutline
 
 const LifeStyle = () => {
   const imageRef = useRef(null);
