@@ -23,7 +23,7 @@ const Registrations = () => {
             }).then((response) => {
                 if (response.data.success === 1) {
                     setRegistrations(response.data.data);
-                    setMsg()
+                    setMsg(null)
                 }
                 else if (response.data.success === 0) {
                     setMsg(response.data.message);

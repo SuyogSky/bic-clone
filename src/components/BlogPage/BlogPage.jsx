@@ -45,7 +45,7 @@ const BlogPage = () => {
                                 return(
                                     <div className="blog mainBlog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                         <div className="img">
-                                            <img src={`https://${ip}/blog/${blog.blog_image}`} alt=""/>
+                                            <img src={`${blog.blog_image}`} alt=""/>
                                         </div>
                                         <h4>{blog.title} - {blog.writer_name}</h4>
                                     </div>
@@ -63,7 +63,7 @@ const BlogPage = () => {
                                     return(
                                         <div className="second-blog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                             <div className="img">
-                                                <img src={`https://${ip}/blog/${blog.blog_image}`} alt=""/>
+                                                <img src={`${blog.blog_image}`} alt=""/>
                                             </div>
                                             <h4>{blog.title} - {blog.writer_name}</h4>
                                         </div>
@@ -108,7 +108,7 @@ const BlogPage = () => {
                                         return(
                                             <div className="other-blog" onClick={()=>{window.location.href=`/blog?id=${blog.post_id}`}}>
                                                 <div className="img">
-                                                    <img src={`https://${ip}/blog/${blog.blog_image}`} alt=""/>
+                                                    <img src={`${blog.blog_image}`} alt=""/>
                                                 </div>
                                                 <h4>{blog.title} - {blog.writer_name}</h4>
                                             </div>

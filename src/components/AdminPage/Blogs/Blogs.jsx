@@ -26,7 +26,7 @@ const Blogs = () => {
             await Axios.get(`https://${ip}/api/post`).then((response) => {
                 if (response.data.success === 1) {
                     setBlogs(response.data.data);
-                    setMsg()
+                    setMsg(null)
                 }
                 else if (response.data.success === 0) {
                     setMsg(response.data.message);

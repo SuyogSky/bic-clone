@@ -1,4 +1,3 @@
-import ip from './ip'
-const imgPath = `https://${ip}/blog/`;
+const imgPath = ``;
 
 export default imgPath
